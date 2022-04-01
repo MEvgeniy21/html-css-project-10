@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Ice Cream - html-css-project-10</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -13,7 +20,17 @@
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <include src="./partials/section-header.html"></include>
+    <main>
+      <include src="./partials/section-hero.html"></include>
+      <include src="./partials/section-products.html"></include>
+      <include src="./partials/section-about.html"></include>
+      <include src="./partials/section-advantages.html"></include>
+      <include src="./partials/section-gallery.html"></include>
+      <include src="./partials/section-reviews.html"></include>
+      <include src="./partials/section-contacts.html"></include>
+    </main>
+    <include src="./partials/section-footer.html"></include>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
