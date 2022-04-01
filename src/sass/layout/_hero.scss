@@ -1,21 +1,20 @@
 .overlay {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
 	background-color: var(--bg-hero-primary-color);
 }
 .hero__container {
-	padding: 194px 0px 202px 20px;
 	position: relative;
 	z-index: 2;
 }
+.hero__wrap {
+	padding: 194px 0px 202px 20px;
+}
 .hero__title {
-	// background-color: green;
 	width: 218px;
 	margin-bottom: 24px;
 	color: var(--text-primary-color);
 	@include font(26px, 29.77px, 0.04em, 400, var(--font-secondary));
 	text-transform: uppercase;
-	// z-index: 4;
 	& span {
 		color: var(--text-secondary-color);
 		@include font(48px, 46.32px, null, 400, var(--font-secondary))
@@ -26,8 +25,9 @@
 		z-index: -2;
 		width: 346px;
 		height: 344px;
-		top: 83px;
-		left: 36px;
+		top: 0px;
+		left: 0px;
+		transform: translate(18%, 22%);
 		border-radius: 50%;
 		background-color: var(--bg-hero-secondary-color);
 	}
@@ -38,17 +38,27 @@
 	padding: 8px 15px;
 	background: var(--btn-bg-secondary-color);
 	border-radius: 20px;
+	transition: background-color 250ms var(--primary-cubic-bezier);
 	& + & {
 		margin-left: 8px;
+	}
+	&:hover,
+	&:focus {
+		background-color: var(--btn-bg-hover-secondary-color);	
 	}
 	&_red {
 		color: var(--text-secondary-color);
 		background-color: var(--bg-primary-color);
 	}
+	&_red:hover,
+	&_red:focus {
+		background-color: var(--btn-bg-hover-primary-color);	
+	}
 }
 .hero__img {
 	position: absolute;
-	top: 92px;
-	right: 32px;
+	top: 0px;
+	left: 0px;
 	z-index: -1;
+	transform: translate(80%, 22%);
 }
