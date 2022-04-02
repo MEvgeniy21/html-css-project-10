@@ -1,0 +1,11 @@
+.header__container {
+	position: absolute;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__logo {
+	padding: 8px 0px;
+}
+

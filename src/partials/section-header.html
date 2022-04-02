@@ -1,3 +1,21 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <a href="" class="header__logo">
+      <picture class="header__img">
+        <source srcset="
+        ./images/logo.png    1x,
+        ./images/logo@2x.png 2x"
+        media="(min-width: 320px)"
+        />
+        <img 
+        src="./images/logo.png" 
+        alt="Product Logo">
+      </picture>
+    </a>
+    <a href="" class="header__burger open">
+      <svg class="open__icon" width="20" height="12">
+        <use href="./images/icons.svg#icon-burger"></use>
+      </svg>
+    </a>
+  </div>
 </header>
