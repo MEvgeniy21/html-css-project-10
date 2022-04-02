@@ -1,0 +1,85 @@
+.reviews {
+    & .container {
+padding-top: 80px;
+    }
+}
+.reviews__img {
+    display: block;
+    margin: auto;
+}
+.feedback {
+    position: relative;
+    margin-top: 29px;
+    margin-bottom: 34px;
+    padding-top: 43px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--bg-reviews-color);
+    max-height: 308px;
+    width: 100%;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        display: block;
+        background-image: url('/images/reviews/reviews-quotes.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 40px;
+        left: 61px;
+        top: 28px;
+    }
+        &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        background-image: url('/images/reviews/reviews-three-dots.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+        // outline: 1px solid tomato;
+    }
+}
+
+.feedback__wrap {
+    position: relative;
+    z-index: 2;
+    
+}
+
+.feedback__text {
+    @include font(14px, 30px, 0.04,500, DM Sans);
+}
+
+.reviews-meta {
+    text-align: center;
+}
+.reviews-meta__text {
+    @include font(16px, 30px, null,500, DM Sans);
+}
+
+.marker-list {
+    @include flex-position ();
+}
+.marker-list__item {
+    &:not(:last-child) {
+        margin-right: 18px;}
+}
+
+.marker--ordinary {
+    width: 12px;
+    height: 12px;
+    background-color: var(--dots-reviews-color);
+    border-radius: 50%;
+}
+
+.marker--current {
+    @include flex-position (flex,center,flex-start);
+}
