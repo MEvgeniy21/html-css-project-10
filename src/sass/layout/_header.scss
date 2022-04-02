@@ -1,7 +1,7 @@
 .header {
 	position: absolute;
 	width: 100%;
-	z-index: 2;
+	z-index: 5;
 }
 .header__wrap {
 	@include flex-position($d: flex, $ai: center, $jc: space-between);
@@ -14,6 +14,12 @@
 	height: 12px;
 	border: 0;
 	background-color: transparent;
+	fill: var(--text-secondary-color);
+	transition: fill 250ms var(--primary-cubic-bezier);
+	&:hover,
+	&:focus {
+		fill: var(--btn-bg-hover-secondary-color);
+	} 
 }
 .header__close-burger {
 	width: 14px;
@@ -22,7 +28,14 @@
 	background-color: transparent;
 	display: block;
 	margin-left: auto;
+	margin-right: 20px;
 	margin-bottom: 26px;
+	fill: var(--text-primary-color);
+	transition: fill 250ms var(--primary-cubic-bezier);
+	&:hover,
+	&:focus {
+		fill: var(--btn-bg-hover-secondary-color);
+	} 
 }
 .mob-menu {
 	position: fixed;	
@@ -32,13 +45,48 @@
 	top: 0;
 	left: 0;
 	padding: 20px 0;
+	overflow: hidden;
+}
+.mob-menu__wrap {
+	width: 210px;
+	margin: 0 auto;
 }
 .mob-menu__button {
 	@include font(16px, 21px, null, 700, var(--font-primary));
 	color: var(--text-secondary-color);
-	padding: 8px 15px;
+	padding: 12px 80px 12px 60px;
 	background: var(--bg-primary-color);
-	border-radius: 20px;
+	border-radius: 22px;
 	border: 0;
 	transition: background-color 250ms var(--primary-cubic-bezier);
+	margin-bottom: 20px;
+	&:hover,
+	&:focus {
+		background-color: var(--btn-bg-hover-primary-color);
+	} 
+}
+.mob-menu__item {
+	padding: 14px 0;
+	border-top: 1px solid var(--bg-item-menu-color); 
+	&:last-child {
+		border-bottom: 1px solid var(--bg-item-menu-color);
+	}
+}
+
+.mob-menu__link {
+	@include font(14px, 18px, null, 700, var(--font-primary));
+	color: var(--text-primary-color);
+	margin-left: 20px;
+	padding: 14px 0px;
+	transition: color 250ms var(--primary-cubic-bezier);
+	&:hover,
+	&:focus {
+		color: var(--text-secondary-color);
+	} 
+}
+.current {
+	color: var(--text-secondary-color);
+}
+.visually-hidden {
+	display: none;
 }
