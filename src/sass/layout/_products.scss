@@ -1,0 +1,201 @@
+.products{
+    padding-bottom: 100px;
+    padding-top: 120px;
+
+
+    &__pre-title{
+        margin-bottom: 15px;
+
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.17;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--text-before-title-color);
+    }
+
+
+    &__title{
+        margin-bottom: 30px;
+
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--text-secondary-color);
+    }
+
+
+    &__item{
+        padding-top: 113px;
+        position: relative;
+    }
+
+
+    &__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    
+    &__item--cream::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        min-width: 249px;
+        min-height: 252px;
+    
+        content: "";
+        background-image: url("/images/product1_mobile1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("/images/product1_mobile2x.png");
+        }
+    }
+    
+    
+&__item--coffee::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    min-width: 249px;
+    min-height: 252px;
+
+    content: "";
+    background-image: url("/images/product2_mobile1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("/images/product2_mobile2x.png");
+    }
+}
+ 
+    
+    &__item--shakes::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        min-width: 249px;
+        min-height: 252px;
+    
+        content: "";
+        background-image: url("/images/product3_mobile1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("/images/product3_mobile2x.png");
+        }
+    }
+
+
+    &__card{
+        display: block;
+        text-align: center;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 160px;
+        
+        border-radius: 24px;
+    }
+
+
+    &__card--cream{
+        background-color: var(--bg-product1-color);
+    }
+
+
+    &__card--coffee{
+        background-color: var(--bg-product2-color);
+    }
+
+
+    &__card--shakes{
+        background-color: var(--bg-product3-color);
+    }
+    
+
+    &__name{
+        margin-bottom: 30px;
+
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.15;
+        
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        
+        color: var(--text-primary-color);
+    }
+
+
+    &__text{
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 30px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.52;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: var(--text-primary-color);
+    }
+
+
+    &__text::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('/images/three_dots.png');
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 6px;
+    }
+
+
+    &__button{
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--btn-bg-primary-color);
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+
+    &__icon{
+        fill: var(--text-secondary-color);
+    }
+
+}
