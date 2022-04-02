@@ -95,3 +95,33 @@
 		height: 5px;
 		width: 5px;
 	}
+
+	.box__number {
+		font-family: Titan One,
+		cursive;
+		font-size: 28px;
+		line-height: 1.14;
+		text-align: right;
+		letter-spacing: .04em;
+		text-transform: uppercase;
+		color: #d41443;
+	}
+
+	.box__text {
+		font-family: DM Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 8px;
+		line-height: 10px;
+		text-align: right;
+		color: #fff;
+	}
+
+	.hero__text {
+		font-family: DM Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 8px;
+		line-height: 150%;
+		color: #fff;
+	}
