@@ -4,10 +4,11 @@
 }
 .hero__container {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
+	overflow: hidden;
 }
 .hero__wrap {
-	padding: 194px 0px 202px 20px;
+	padding: 194px 62px 202px 0px;
 }
 .hero__title {
 	width: 218px;
@@ -22,12 +23,11 @@
 	&::after {
 		content: " ";
 		position: absolute;
-		z-index: -2;
+		z-index: -1;
 		width: 346px;
 		height: 344px;
-		top: 0px;
-		left: 0px;
-		transform: translate(18%, 22%);
+		top: 83px;
+		left: 36px;
 		border-radius: 50%;
 		background-color: var(--bg-hero-secondary-color);
 	}
@@ -57,8 +57,7 @@
 }
 .hero__img {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 92px;
+	left: 117px;
 	z-index: -1;
-	transform: translate(80%, 22%);
 }
