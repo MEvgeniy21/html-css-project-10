@@ -125,3 +125,31 @@
 		line-height: 150%;
 		color: #fff;
 	}
+
+	.white-elipse-second, .white-elipse-first {
+			display: block;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background-color: #fff;
+			position: relative;
+			}
+
+	.white-elipse-first {
+		margin-bottom: 35px;
+	}
+	
+ .box {
+		position: absolute;
+		right: 56%;
+		top: 5%;
+		}
+ 
+		.hero_right {
+			display: flex;
+			position: absolute;
+			right: 0;
+			flex-direction: column;
+			bottom: 172px;
+		}
+
