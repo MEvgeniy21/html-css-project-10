@@ -1,14 +1,15 @@
 
        .advantages{
-        margin-top: 39px;
-        margin-bottom: 43px;
+        background-color: var(--bg-secondary-color);
+        margin-top: 0;
+        margin-bottom: 97px;
         @media screen and (min-width: 768px){
-            margin-top: 44px;
-            margin-bottom: 70px;    
+            margin-top: 0;
+            margin-bottom: 140px;    
         }
         @media screen and (min-width: 1200px){
-            margin-top: 19px;
-            margin-bottom: 39px;    
+            margin-top: 0;
+            margin-bottom: 139px;    
         }
        
        }
