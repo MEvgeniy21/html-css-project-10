@@ -15,7 +15,7 @@ padding-bottom: 132px;
 padding-left: 137px;
     padding-right: 137px;
 }
-outline: 1px solid blue;
+// outline: 1px solid blue;
     }
 }
 .reviews__img {
@@ -34,28 +34,7 @@ outline: 1px solid blue;
     background-color: var(--bg-reviews-color);
     // max-height: 308px;
     width: 100%;
-    &::before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        display: block;
-        background-image: url('/images/reviews/reviews-quotes.svg');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 54px;
-        height: 40px;
-        left: 61px;
-        top: 28px;
-        @include min-media($tablet) {
-            left: 40px;
-            top: 30px;
-        }
-        @include min-media($desktop) {
-            left: 50px;
-            top: 32px;
-        }
-    }
-    &::after {
+        &::after {
         content: '';
         position: absolute;
         display: inline-block;
@@ -86,6 +65,9 @@ outline: 1px solid blue;
         // max-height: 164px;
         
     }
+    @include media-span ($tablet, $desktop) {
+        background-color: var(--bg-reviews-tablet-color);
+    }
     @include min-media($desktop) {
         margin-top: 15px;
         margin-bottom: 34px;
@@ -94,18 +76,17 @@ outline: 1px solid blue;
         padding-bottom: 32px;
 
     }
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
 }
 
 .feedback__wrap {
     position: relative;
-    z-index: 2;
     // height: 100%;
     background-image: repeating-linear-gradient(to bottom,
     transparent,
-    transparent 30px,
-    var(--lines-reviews-color) 30px,
-    var(--lines-reviews-color) 31px
+    transparent 29px,
+    var(--lines-reviews-color) 29px,
+    var(--lines-reviews-color) 30px
     );
     @include min-media($tablet) {
         padding-left: 20px;
@@ -115,17 +96,41 @@ outline: 1px solid blue;
     @include min-media($desktop) {
         padding-left: 28px;
         padding-right: 35px;
-
     }
-    outline: 1px solid yellow;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        display: block;
+        background-image: url('/images/reviews/reviews-quotes.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 40px;
+        left: 11px;
+        top: -15px;
+        @include min-media($tablet) {
+            left: -20px;
+            top: -17px;
+        }
+        
+        @include min-media($desktop) {
+            left: -9px;
+            top: -15px;
+        }
+    }
+    // outline: 1px solid yellow;
 
 }
 
 .feedback__text {
+    position: relative;
     margin: auto;
+    min-width: 160px;
+    z-index: 2;
     @include font(12px, 31px, 0.04em,500, DM Sans);
     // max-height: 240px;
-    max-width: 160px;
+    // max-width: 160px;
     // overflow-y: scroll;
     @include min-media($tablet) {
         max-width: 100%;
