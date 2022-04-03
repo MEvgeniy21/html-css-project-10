@@ -9,6 +9,12 @@ text-align: center;
     padding-right: 74px;
     padding-bottom: 119px;
 }
+@include min-media($desktop) {
+padding-top: 123px;
+padding-bottom: 132px;
+padding-left: 137px;
+    padding-right: 137px;
+}
 outline: 1px solid blue;
     }
 }
@@ -44,6 +50,10 @@ outline: 1px solid blue;
             left: 40px;
             top: 30px;
         }
+        @include min-media($desktop) {
+            left: 50px;
+            top: 32px;
+        }
     }
     &::after {
         content: '';
@@ -59,7 +69,11 @@ outline: 1px solid blue;
         height: 4px;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -30px;        
+        bottom: -30px;
+        @include min-media($desktop) {
+            bottom: -15px;
+        }
+
         
     }
     @include min-media($tablet) {
@@ -71,6 +85,14 @@ outline: 1px solid blue;
         padding-bottom: 28px;
         // max-height: 164px;
         
+    }
+    @include min-media($desktop) {
+        margin-top: 15px;
+        margin-bottom: 34px;
+        padding-left: 59px;
+        padding-right: 54px;
+        padding-bottom: 32px;
+
     }
     outline: 1px solid tomato;
 }
@@ -89,6 +111,12 @@ outline: 1px solid blue;
         padding-left: 20px;
         padding-right: 44px;
     }
+
+    @include min-media($desktop) {
+        padding-left: 28px;
+        padding-right: 35px;
+
+    }
     outline: 1px solid yellow;
 
 }
@@ -103,6 +131,9 @@ outline: 1px solid blue;
         max-width: 100%;
         @include font(14px, 30px, 0.04em,500, DM Sans);
     }
+    @include min-media($desktop) {
+        @include font(16px, 30px, 0.04em,500, DM Sans)
+    }
 }
 
 .reviews-meta {
@@ -115,6 +146,9 @@ outline: 1px solid blue;
     @include min-media($tablet) {
         @include font(16px, 30px, null,500, DM Sans);
         margin-bottom: 35px;
+    }
+    @include min-media($desktop) {
+        @include font(20px, 37px, null,500, DM Sans);
     }
 }
 
