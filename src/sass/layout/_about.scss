@@ -1,14 +1,20 @@
 .about {
-    width: 100%;
-    padding-top: 121px;
+    width: 100%; 
+    padding-top: 121px; 
+    padding-bottom: 39px;
     background-color: var(--bg-secondary-color);
+    @include min-media($tablet) {
+        padding-top: 130px;
+        padding-bottom: 66px;
+}
 }
 
 .about__container {
     width: 100vw;
     position: relative;
     align-items: center;
-    @include min-media($mobile);
+    padding-left: 39px;
+    padding-right: 36px;
 }
 
 .about__pre-title {
@@ -19,6 +25,10 @@
     margin-bottom: 15px;
 
     color: var(--text-before-title-color);
+    @include min-media($tablet) {
+        @include font(26px, 30px, null, 400, var(--font-secondary));
+        margin-bottom: 16px;
+    }
 }
 
 .about__title {
@@ -29,41 +39,52 @@
     margin-bottom: 26px;
 
     color: var(--text-secondary-color);
+    @include min-media($tablet) {
+        @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
+        margin-bottom: 50px;
 }
-.about__img {
-    margin-bottom: 46px;
-    @include flex-position(flex, center, center);
 }
-.about-wrapper {
+.about__wrapper {
     background-image: url(../images/about/bg-milk-320.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
     margin-left: -20px;
-    margin-right: -20px;
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         background-image: url(../images/about/bg-milk-320@2x.png);
+    }
+    @include min-media($tablet) {
+            margin-left: 0;
+            margin-right: 0;
+            padding-bottom: 62px;
+            padding-top: 50px;
+            background-image: inherit;
     }
 }
 
 .about__text {
     @include font(12px, 19px, null, 500, var(--font-primary));
     margin-bottom: 35px;
-    margin-left: 50px;
-    margin-right: 50px;
 
     color: var(--text-content-primary-color);
+    @include min-media($tablet) {
+        @include font(14px, 25px, null, 500, var(--font-primary));
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .about__text-info {
     @include font(12px, 19px, null, 500, var(--font-primary));
 
-    margin-bottom: 17px;
-    margin-left: 50px;
-    margin-right: 50px;
     color: var(--text-content-secondary-color);
+    @include min-media($tablet) {
+        @include font(14px, 25px, 0.04em, 500, var(--font-primary));
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .about__button {
     cursor: pointer;
@@ -71,7 +92,7 @@
     @include font(14px, 18px, null, 700, var(--font-primary));
     color: var(--text-secondary-color);
     padding: 13px 38px 13px 37px;
-    margin-left: 50px;
+    margin-left: 30px;
     background: var(--btn-bg-primary-color);
     border-radius: 22px;
     border: 1px solid rgba(0, 0, 0, 0);
@@ -80,10 +101,41 @@
     &:focus {
         background-color: var(--btn-bg-hover-primary-color);
     }
+    @include min-media($tablet) {
+        @include font(16px, 21px, null, 700, var(--font-primary));
+        margin-left: 0;
 }
-
+}
 .button__vector {
     margin-left: 14px;
     display: inline-block;
     width: 1em;
+}
+.about__wrap {
+@include min-media($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+}
+.about__wrap--foto {
+    margin-bottom: 46px;
+    @include flex-position(flex, null, center);
+    @include min-media($tablet) {
+    margin-bottom: 0;
+    }
+}
+.about__wrap--content {
+    @include min-media($tablet) {
+        width: 340px;
+    }
+    
+}
+.about__text--wrap {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 17px;
+    @include min-media($tablet) {
+        padding: 0;
+    }
 }
