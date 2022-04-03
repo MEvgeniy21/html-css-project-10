@@ -128,9 +128,8 @@
     }
 
     &__contact-tel {
-      flex-wrap: wrap;
-      font-size: 16px;
-      line-height: 1, 857;
+      font-size: 14px;
+      line-height: 1.857;
     }
 
     &__copy-text {
@@ -146,7 +145,8 @@
     }
 
     &__copy {
-      min-height: 73px;
+      padding-top: 29px;
+      padding-bottom: 18px;
     }
   }
 }
@@ -178,9 +178,13 @@
     &__social-list {
       margin-bottom: 50px;
     }
-
+    &__contact-tel {
+      font-size: 16px;
+      line-height: 1.86;
+    }
     &__copy {
-      min-height: 49px;
+      padding-top: 9px;
+      padding-bottom: 10px;
     }
   }
 }
