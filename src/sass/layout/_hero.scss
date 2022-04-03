@@ -1,12 +1,25 @@
 .overlay {
-	height: 500px;
-    overflow: hidden;
 	width: 100vw;
 	background-color: var(--bg-hero-primary-color);
+	@media screen and (max-width: 767px) {
+		overflow: hidden;
+		height: 500px;
+	}
+
+	@media screen and (min-width: 768px) {
+		height: 400px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		height: 665px;
+	}
 }
 .hero__container {
 	position: relative;
 	z-index: 2;
+	@media screen and (min-width: 768px) {
+		height: 100%;
+	}
 }
 .hero__wrap {
 	padding: 194px 0px 202px 20px;
@@ -14,6 +27,8 @@
 	@media screen and (min-width: 768px) {
 		display: flex;
 		position: relative;
+		padding: 0;
+		height: 100%;
 	}
 }
 .hero__title {
@@ -37,6 +52,30 @@
 		transform: translate(18%, 22%);
 		border-radius: 50%;
 		background-color: var(--bg-hero-secondary-color);
+	}
+	@media screen and (min-width: 768px) {
+		
+		font-size: 22px;
+		line-height: 25px;
+		width: 162px;
+		
+		& span {
+			font-size: 34px;
+			line-height: 90.5%;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+		
+	&::after {
+		
+		width: 324px;
+		height: 322px;									
+		top: -29px;		
+		transform: translate(8%, 19%);
+		top: -29px;
+		left: 255px;
+		
+	    }
 	}
 }
 .hero__button {
@@ -64,14 +103,29 @@
 }
 .hero__img {
 	position: absolute;
+	z-index: -1;
+	@media screen and (max-width: 767px) {
 	top: 0px;
 	left: 0px;
-	z-index: -1;
 	transform: translate(80%, 22%);
+	}
+	
+	
+
+@media screen and (min-width: 768px) {
+	right: 213px;
+	bottom: 0;
+	
+	
+}
+				
 }
 
 .second_box {
 	display: flex;
+	position: absolute;
+	bottom: 28px;
+	
 }
 
 .hero__button-arrow {
@@ -95,6 +149,7 @@
 	.hero__svg {
 		height: 5px;
 		width: 5px;
+		fill: var(--bg-hero-primary-color)
 	}
 
 	.box__number {
@@ -116,7 +171,8 @@
 		line-height: 10px;
 		text-align: right;
 		color: #fff;
-	}
+}
+	
 
 	.hero__text {
 		font-family: DM Sans;
@@ -140,17 +196,41 @@
 		margin-bottom: 35px;
 	}
 	
- .box {
-		position: absolute;
-		right: 56%;
-		top: 5%;
-		}
- 
-		.hero_right {
-			display: flex;
+	.box {
 			position: absolute;
-			right: 0;
-			flex-direction: column;
-			bottom: 172px;
-		}
+			right: 56%;
+			top: 5%;
+			}
+	
+	.hero_right {
+		display: flex;
+		position: absolute;
+		right: 0;
+		flex-direction: column;
+		bottom: 0;
+	}
 
+	.right_first_box {
+		right: 0;
+		width: 51px;
+		height: 104px;
+		margin-bottom: 72px;
+		padding-left: 150px;
+	}
+
+
+	.box-tex {
+		height: 73px;
+		position: absolute;
+		bottom: 8px;
+		right: -95px;
+	}
+
+	.first_box {
+
+		@media screen and (min-width: 768px) {
+			width: 162px;
+			padding-top: 102px;
+		}
+		
+	}
