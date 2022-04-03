@@ -1,0 +1,177 @@
+.reviews {
+    & .container {
+padding-top: 80px;
+padding-bottom: 86px;
+text-align: center;
+@include min-media($tablet) {
+    padding-top: 121px;
+    padding-left: 74px;
+    padding-right: 74px;
+    padding-bottom: 119px;
+}
+@include min-media($desktop) {
+padding-top: 123px;
+padding-bottom: 132px;
+padding-left: 137px;
+    padding-right: 137px;
+}
+// outline: 1px solid blue;
+    }
+}
+.reviews__img {
+    display: block;
+    margin: auto;
+}
+.feedback {
+    position: relative;
+    margin-top: 29px;
+    margin-bottom: 52px;
+    padding-top: 43px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--bg-reviews-color);
+    // max-height: 308px;
+    width: 100%;
+        &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        background-image: url('/images/reviews/reviews-ellipse.svg'),
+        url('/images/reviews/reviews-ellipse.svg'),
+        url('/images/reviews/reviews-ellipse.svg');
+        background-size: 4px 4px, 4px 4px, 4px 4px;
+        background-position: left,center,right;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        @include min-media($desktop) {
+            bottom: -15px;
+        }
+
+        
+    }
+    @include min-media($tablet) {
+        margin-top: 19px;
+        margin-bottom: 42px;
+        padding-left: 60px;
+        padding-right: 36px;
+        padding-top: 47px;
+        padding-bottom: 28px;
+        // max-height: 164px;
+        
+    }
+    @include media-span ($tablet, $desktop) {
+        background-color: var(--bg-reviews-tablet-color);
+    }
+    @include min-media($desktop) {
+        margin-top: 15px;
+        margin-bottom: 34px;
+        padding-left: 59px;
+        padding-right: 54px;
+        padding-bottom: 32px;
+
+    }
+    // outline: 1px solid tomato;
+}
+
+.feedback__wrap {
+    position: relative;
+    // height: 100%;
+    background-image: repeating-linear-gradient(to bottom,
+    transparent,
+    transparent 29px,
+    var(--lines-reviews-color) 29px,
+    var(--lines-reviews-color) 30px
+    );
+    @include min-media($tablet) {
+        padding-left: 20px;
+        padding-right: 44px;
+    }
+
+    @include min-media($desktop) {
+        padding-left: 28px;
+        padding-right: 35px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        display: block;
+        background-image: url('/images/reviews/reviews-quotes.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 40px;
+        left: 11px;
+        top: -15px;
+        @include min-media($tablet) {
+            left: -20px;
+            top: -17px;
+        }
+        
+        @include min-media($desktop) {
+            left: -9px;
+            top: -15px;
+        }
+    }
+    // outline: 1px solid yellow;
+
+}
+
+.feedback__text {
+    position: relative;
+    margin: auto;
+    min-width: 160px;
+    z-index: 2;
+    @include font(12px, 31px, 0.04em,500, DM Sans);
+    // max-height: 240px;
+    // max-width: 160px;
+    // overflow-y: scroll;
+    @include min-media($tablet) {
+        max-width: 100%;
+        @include font(14px, 30px, 0.04em,500, DM Sans);
+    }
+    @include min-media($desktop) {
+        @include font(16px, 30px, 0.04em,500, DM Sans)
+    }
+}
+
+.reviews-meta {
+    text-align: center;
+    padding-top: 22px;
+}
+.reviews-meta__text {
+    @include font(14px, 26px, null,500, DM Sans);
+    margin-bottom: 30px;
+    @include min-media($tablet) {
+        @include font(16px, 30px, null,500, DM Sans);
+        margin-bottom: 35px;
+    }
+    @include min-media($desktop) {
+        @include font(20px, 37px, null,500, DM Sans);
+    }
+}
+
+.marker-list {
+    @include flex-position ();
+}
+.marker-list__item {
+    &:not(:last-child) {
+        margin-right: 18px;}
+}
+
+.marker--ordinary {
+    width: 12px;
+    height: 12px;
+    background-color: var(--dots-reviews-color);
+    border-radius: 50%;
+}
+
+.marker--current {
+    @include flex-position (flex,center,flex-start);
+}
