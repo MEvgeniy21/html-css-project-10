@@ -1057,13 +1057,20 @@ ol {
 }
 
 .gallery {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--bg-secondary-color)), to(var(--bg-primary-color)));
-  background-image: linear-gradient(to bottom, var(--bg-secondary-color) 0, var(--bg-primary-color) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, var(--bg-secondary-color)), color-stop(40%, var(--bg-primary-color)), to(var(--bg-primary-color)));
+  background-image: linear-gradient(to bottom, var(--bg-secondary-color) 40%, var(--bg-primary-color) 40%, var(--bg-primary-color) 100%);
 }
 
 .photo {
   margin-right: auto;
   margin-left: auto;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.photo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .footer {
