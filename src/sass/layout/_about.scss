@@ -1,0 +1,89 @@
+.about {
+    width: 100%;
+    padding-top: 121px;
+    background-color: var(--bg-secondary-color);
+}
+
+.about__container {
+    width: 100vw;
+    position: relative;
+    align-items: center;
+    @include min-media($mobile);
+}
+
+.about__pre-title {
+    @include font(18px, 21px, null, 400, var(--font-secondary));
+    @include flex-position(flex, center, center);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    color: var(--text-before-title-color);
+}
+
+.about__title {
+    @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
+    @include flex-position(flex, center, center);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+
+    color: var(--text-secondary-color);
+}
+.about__img {
+    margin-bottom: 46px;
+    @include flex-position(flex, center, center);
+}
+.about-wrapper {
+    background-image: url(../images/about/bg-milk-320.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    margin-left: -20px;
+    margin-right: -20px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/about/bg-milk-320@2x.png);
+    }
+}
+
+.about__text {
+    @include font(12px, 19px, null, 500, var(--font-primary));
+    margin-bottom: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    color: var(--text-content-primary-color);
+}
+
+.about__text-info {
+    @include font(12px, 19px, null, 500, var(--font-primary));
+
+    margin-bottom: 17px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: var(--text-content-secondary-color);
+}
+.about__button {
+    cursor: pointer;
+    @include flex-position(flex, center, center);
+    @include font(14px, 18px, null, 700, var(--font-primary));
+    color: var(--text-secondary-color);
+    padding: 13px 38px 13px 37px;
+    margin-left: 50px;
+    background: var(--btn-bg-primary-color);
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: background-color 250ms var(--primary-cubic-bezier);
+    &:hover,
+    &:focus {
+        background-color: var(--btn-bg-hover-primary-color);
+    }
+}
+
+.button__vector {
+    margin-left: 14px;
+    display: inline-block;
+    width: 1em;
+}
