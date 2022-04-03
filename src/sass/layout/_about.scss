@@ -68,11 +68,11 @@
     @include flex-position(flex, center, center);
     @include font(14px, 18px, null, 700, var(--font-primary));
     color: var(--text-secondary-color);
-    padding: 8px 37px;
+    padding: 13px 38px 13px 37px;
     margin-left: 50px;
     background: var(--btn-bg-primary-color);
     border-radius: 22px;
-    border-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0);
     transition: background-color 250ms var(--primary-cubic-bezier);
     &:hover,
     &:focus {
