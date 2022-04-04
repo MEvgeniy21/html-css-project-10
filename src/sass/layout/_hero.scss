@@ -1,3 +1,4 @@
+
 .overlay {
 	width: 100vw;
 	background-color: var(--bg-hero-primary-color);
@@ -100,25 +101,7 @@
 		background-color: var(--btn-bg-hover-primary-color);	
 	}
 }
-.hero__img {
-	position: absolute;
-	z-index: -1;
-	@media screen and (max-width: 767px) {
-	top: 0px;
-	left: 0px;
-	transform: translate(80%, 22%);
-	}
-	
-	
 
-@media screen and (min-width: 768px) {
-	right: 213px;
-	bottom: 0;
-	
-	
-}
-				
-}
 
 .second_box {
 	display: none;
@@ -126,7 +109,7 @@
 	bottom: 28px;
 
 	@media screen and (min-width: 768px) {
-		display: flex;
+		display: block;
 	}
 	
 }
@@ -160,6 +143,7 @@
 	}
 
 	.box__number {
+		font-weight: 400;
 		font-family: Titan One,
 		cursive;
 		font-size: 28px;
@@ -245,3 +229,47 @@
 		}
 		
 	}
+
+.hero__img {
+	position: absolute;
+	z-index: -1;
+
+
+
+	@media screen and (max-width: 767px) {
+		top: 0px;
+		left: 0px;
+		transform: translate(80%, 22%);
+	}
+
+
+
+	@media screen and (min-width: 768px) {
+		right: 213px;
+		bottom: 0;
+		animation: pulsing 2s;
+
+	}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+	@keyframes pulsing {
+		0% {
+
+			transform: translateX(500%)
+		}
+
+		50% {
+
+			transform: translateX(-200%);
+		}
+
+		100% {
+
+			transform: translateX(0);
+		}
+	}
+}
