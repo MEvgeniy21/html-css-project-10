@@ -133,6 +133,22 @@ body.lock {
 		color: var(--text-secondary-color);
 	} 
 }
+.topbutton {
+	width: 60px;
+	height: 60px;
+	@include flex-position(flex, center, center);
+	position:fixed;
+	z-index: 1;
+	bottom: 10px;
+	right: 10px;
+	cursor:pointer;
+	color: var(--bg-hero-primary-color);
+	@include font(26px, 29.77px, 0.04em, 400, var(--font-secondary));
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	}
 @include min-media (768px) {
 	.header__logo {
 		padding: 32px 0px;
@@ -173,6 +189,12 @@ body.lock {
 			width: 254px;
 		}
 	}
+	.topbutton {
+		width: 70px;
+		height: 70px;
+		bottom: 30px;
+		right: 30px;
+	}
 }
 @include min-media (1200px) {
 	body.lock {
@@ -203,6 +225,10 @@ body.lock {
 	}
 	.mob-menu {
 		display: none;
+	}
+	.topbutton {
+		bottom: 50px;
+		right: 50px;
 	}
 }
 .current {
