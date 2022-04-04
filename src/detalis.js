@@ -1,12 +1,13 @@
 (() => {
 	const refs = {
-	  openDetalBtn: document.querySelector("[data-detalis-open]"),
+		openDetalBtn: document.querySelector("[data-detalis-open]"),
 		detalis: document.querySelector("[data-detalis]"),
 		text: document.querySelector("[data-text]"),
 	};
 
 	refs.openDetalBtn.addEventListener("click", toggleDetalis);
 	refs.detalis.addEventListener("click", toggleDetalis);
+	
 
 	function toggleDetalis() {
 		refs.detalis.classList.toggle("is-open");
