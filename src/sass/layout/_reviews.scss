@@ -1,23 +1,25 @@
-.reviews {
-    & .container {
-padding-top: 80px;
-padding-bottom: 86px;
-text-align: center;
-@include min-media($tablet) {
-    padding-top: 121px;
-    padding-left: 74px;
-    padding-right: 74px;
-    padding-bottom: 119px;
-}
-@include min-media($desktop) {
-padding-top: 123px;
-padding-bottom: 132px;
-padding-left: 137px;
-    padding-right: 137px;
-}
-// outline: 1px solid blue;
+.slideshow-container {
+    padding-top: 80px;
+    padding-bottom: 86px;
+    text-align: center;
+    @include min-media($tablet) {
+        padding-top: 121px;
+        padding-left: 74px;
+        padding-right: 74px;
+        padding-bottom: 119px;
     }
+    @include min-media($desktop) {
+    padding-top: 123px;
+    padding-bottom: 132px;
+    padding-left: 137px;
+        padding-right: 137px;
+    }
+    // outline: 1px solid blue;
 }
+.slide {
+    display: none;
+}
+
 .reviews__img {
     display: block;
     margin: auto;
@@ -147,31 +149,64 @@ padding-left: 137px;
 }
 .reviews-meta__text {
     @include font(14px, 26px, null,500, DM Sans);
-    margin-bottom: 30px;
     @include min-media($tablet) {
         @include font(16px, 30px, null,500, DM Sans);
-        margin-bottom: 35px;
     }
     @include min-media($desktop) {
         @include font(20px, 37px, null,500, DM Sans);
     }
 }
 
+
 .marker-list {
     @include flex-position ();
+    margin-top: 30px;
+    @include min-media($tablet) {
+        margin-top: 35px;
+    }
 }
 .marker-list__item {
     &:not(:last-child) {
         margin-right: 18px;}
 }
 
-.marker--ordinary {
+.marker {
     width: 12px;
     height: 12px;
-    background-color: var(--dots-reviews-color);
-    border-radius: 50%;
+    background-image: url('/images/reviews/reviews-marker.svg');
+    transition-property: background-image;
+    transition-duration: 500ms;
+    transition-timing-function: var(--primary-cubic-bezier);
+    // background-color: var(--dots-reviews-color);
+    // border-radius: 50%;
 }
 
-.marker--current {
-    @include flex-position (flex,center,flex-start);
+.marker--active {
+    width: 12px;
+    height: 12px;
+    background-image: url('/images/reviews/reviews-marker-home.svg')
 }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 12s;
+    // -webkit-animation-direction:normal, reverse;
+    animation-name: fade;
+    animation-duration: 12s;
+    // animation-direction: normal, reverse;
+  }
+  
+  @-webkit-keyframes fade {
+    0% {opacity: 0} 
+    30% {opacity: 1}
+    80% {opacity: 1}
+    98% {opacity: .1} 
+    100% {opacity: 0}
+  }
+  
+  @keyframes fade {
+    0% {opacity: 0} 
+    30% {opacity: 1}
+    80% {opacity: 1}
+    98% {opacity: .1} 
+    100% {opacity: 0}
+  }
