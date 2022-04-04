@@ -37,24 +37,20 @@
     // max-height: 308px;
     width: 100%;
         &::after {
-        content: '';
+        content: '. . .';
         position: absolute;
         display: inline-block;
-        background-image: url('/images/reviews/reviews-ellipse.svg'),
-        url('/images/reviews/reviews-ellipse.svg'),
-        url('/images/reviews/reviews-ellipse.svg');
-        background-size: 4px 4px, 4px 4px, 4px 4px;
-        background-position: left,center,right;
-        background-repeat: no-repeat;
-        width: 30px;
-        height: 4px;
+        // width: 32px;
+        height: 33px;
         left: 50%;
         transform: translateX(-50%);
         bottom: -30px;
+        font-size: 32px;
+        color: var(--btn-bg-hover-secondary-color);
         @include min-media($desktop) {
             bottom: -15px;
         }
-
+// outline: 1px solid tomato;
         
     }
     @include min-media($tablet) {
@@ -100,26 +96,22 @@
         padding-right: 35px;
     }
     &::before {
-        content: '';
+        content: '\275E';
         position: absolute;
-        z-index: 1;
+        z-index: 1;        
         display: block;
-        background-image: url('/images/reviews/reviews-quotes.svg');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 54px;
-        height: 40px;
-        left: 11px;
-        top: -15px;
+        left: 0;
+        top: 0;
+        transform: translate(10px,-55px);
+        font-size: 110px;
+        color: var(--lines-reviews-color);
         @include min-media($tablet) {
-            left: -20px;
-            top: -17px;
-        }
-        
+            transform: translate(-15px,-55px);
+        }        
         @include min-media($desktop) {
-            left: -9px;
-            top: -15px;
+            transform: translate(-10px,-55px);
         }
+        // outline: 1px solid yellow;
     }
     // outline: 1px solid yellow;
 
