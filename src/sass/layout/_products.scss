@@ -367,6 +367,7 @@
         background-color: var(--btn-bg-primary-color);
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         @include min-media($desktop) {
             margin-bottom: 50px;
@@ -374,11 +375,22 @@
         &.is-open{
             display: none;
         }
+
+        &:hover,
+        &:focus {
+            background-color: var(--text-secondary-color);
+        }
     }
 
 
     &__icon{
         fill: var(--text-secondary-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        .products__button:hover &,
+        .products__button:focus & {
+            fill: var(--btn-bg-primary-color);
+        }
     }
 
 }
@@ -411,4 +423,10 @@
 .products__detalis--icon{
     font-size: 12px;
     color: var(--text-secondary-color);
+
+   
+    &:hover,
+    &:focus {
+        font-size: 16px;
+    }
 }

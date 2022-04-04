@@ -2,7 +2,7 @@
 	const refs = {
 	  openDetalBtn: document.querySelector("[data-detalis-open]"),
 		detalis: document.querySelector("[data-detalis]"),
-		text: document.querySelector("[text]"),
+		text: document.querySelector("[data-text]"),
 	};
 
 	refs.openDetalBtn.addEventListener("click", toggleDetalis);
@@ -17,7 +17,7 @@
 	const refs2 = {
 	  openDetalBtn2: document.querySelector("[data-detalis-open2]"),
 		detalis2: document.querySelector("[data-detalis2]"),
-		text2: document.querySelector("[text2]"),
+		text2: document.querySelector("[data-text2]"),
 	};
 
 	refs2.openDetalBtn2.addEventListener("click", toggleDetalis2);
@@ -32,7 +32,7 @@
 		const refs3 = {
 	  openDetalBtn3: document.querySelector("[data-detalis-open3]"),
 		detalis3: document.querySelector("[data-detalis3]"),
-		text3: document.querySelector("[text3]"),
+		text3: document.querySelector("[data-text3]"),
 	};
 
 	refs3.openDetalBtn3.addEventListener("click", toggleDetalis3);
