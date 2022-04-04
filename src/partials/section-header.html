@@ -73,4 +73,60 @@
       </div>
     </div>
   </div>
+  <div class="backdrop">
+    <div class="modal">
+      <button type="button" class="modal__btn">
+        <svg class="modal__close" width="18" height="18">
+          <use href="./images/icons.svg#icon-close">
+          </use>
+        </svg>
+      </button>
+      <form class="modal__form js-speaker-form">
+        <div class="modal__form-wrap">
+          <fieldset class="modal__field">
+            <legend class="modal__titl">Your wish</legend>
+            <label class="modal__box">
+              <img src="./images/products/product-1-220.png" alt="ice cream" width="50" height="50">
+              <input class="modal__inout" type="checkbox" name="product" value="ice cream">
+              Ice cream
+            </label>
+            <label class="modal__box">
+              <img src="./images/products/product-2-220.png" alt="ice cream" width="50" height="50">
+              <input class="modal__inout" type="checkbox" name="product" value="ice coffee">
+              Ice coffee
+            </label>
+            <label class="modal__box">
+              <img src="./images/products/product-3-220.png" alt="ice cream" width="50" height="50">
+              <input class="modal__inout" type="checkbox" name="product" value="milkshakes">
+              Milkshakes
+            </label>
+          </fieldset>
+          <fieldset class="modal__field">
+          <legend class="modal__titl">Your info</legend>
+          <div class="modal__wrap">
+            <label class="modal__text" for="user-name">Name</label>
+            <div class="modal__form-wrap">
+              <input type="text" name="name" id="client-name" class="modal__input" required/>
+            </div>
+          </div>
+          <div class="modal__wrap">
+            <label class="modal_text" for="tel">Phone</label>
+            <div class="modal__form-wrap">
+            <input type="number" id="client-tel" title="+380" id="tel" class="modal__input" required />
+            </div>
+          </div>
+          <div class="modal__wrap">
+            <label class="modal__text" for="email">Email</label>
+            <div class="modal__form-wrap">
+            <input type="email" id="client-email" id="email" class="modal__input" required/>
+            </div>
+          </div>
+          </fieldset>
+        </div>
+        <div class="modal__button">
+          <button class="modal__sunmit header__button" type="submit">Well Done</button>
+        </div>
+      </form>    
+    </div>
+  </div>
 </header>
