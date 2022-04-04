@@ -1,3 +1,19 @@
 <section class="gallery" id="gallery">
-  <div class="container"></div>
+  <div class="container">
+    <picture>
+      <source srcset="/images/gallery/gallery_desktop1x.png 1x,
+                      /images/gallery/gallery_desktop2x.png 2x"
+                      media="min-width: 1200px">
+  
+      <source srcset="/images/gallery/gallery_tablet1x.png 1x,
+                      /images/gallery/gallery_tablet2x.png 2x" 
+                      media="min-width: 768px">
+
+      <source srcset="/images/gallery/gallery_mob1x.png 1x,
+                      /images/gallery/gallery_mob2x.png 2x" 
+                      media="min-width: 320px">
+
+      <img class="photo" src="/images/gallery/gallery_desktop2x.png"  alt="Photo gallery">              
+    </picture>
+  </div>
 </section>

@@ -69,7 +69,7 @@
 
     &__list{
         @include min-media($tablet) {
-            @include flex-position;
+            @include flex-position($ai: flex-start);
         }
     }
 
@@ -129,7 +129,6 @@
         min-width: 220px;
         min-height: 226px;
         background-image: url("../images/products/product-1-220.png");
-        }
         
         
         @media (min-device-pixel-ratio: 2),
@@ -137,12 +136,13 @@
         (min-resolution: 2dppx) {
             background-image: url("../images/products/product-1-220@2x.png");
         }
+    }
 
         @include min-media($desktop) {
             min-width: 335px;
             min-height: 335px;
             background-image: url("../images/products/product-1-335.png");
-        }
+        
         
         
         @media (min-device-pixel-ratio: 2),
@@ -150,6 +150,7 @@
         (min-resolution: 2dppx) {
             background-image: url("../images/products/product-1-335@2x.png");
         }
+    }
     }
     
     
@@ -178,7 +179,7 @@
         min-width: 220px;
         min-height: 226px;
         background-image: url("../images/products/product-2-220.png");
-    }
+    
     
     
     @media (min-device-pixel-ratio: 2),
@@ -186,12 +187,13 @@
     (min-resolution: 2dppx) {
         background-image: url("../images/products/product-2-220@2x.png");
     }
+}
     
     @include min-media($desktop) {
         min-width: 335px;
         min-height: 335px;
         background-image: url("../images/products/product-2-335.png");
-    }
+    
     
     
     @media (min-device-pixel-ratio: 2),
@@ -199,6 +201,7 @@
     (min-resolution: 2dppx) {
         background-image: url("../images/products/product-2-335@2x.png");
     }
+}
 }
  
     
@@ -227,7 +230,7 @@
             min-width: 220px;
             min-height: 226px;
             background-image: url("../images/products/product-3-220.png");
-        }
+        
         
         
         @media (min-device-pixel-ratio: 2),
@@ -235,18 +238,20 @@
         (min-resolution: 2dppx) {
             background-image: url("../images/products/product-3-220@2x.png");
         }
+    }
         
         @include min-media($desktop) {
             min-width: 335px;
             min-height: 335px;
             background-image: url("../images/products/product-3-335.png");
-        }
+        
         
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: url("../images/products/product-3-335@2x.png");
         }
+    }
     }
 
 
@@ -330,6 +335,11 @@
             margin-bottom: 60px;
             font-size: 16px;  
         }
+
+        &.margin{
+            margin-bottom: 0;
+        }
+
     }
 
 
@@ -357,15 +367,63 @@
         background-color: var(--btn-bg-primary-color);
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         @include min-media($desktop) {
             margin-bottom: 50px;
         }
+
+        &.is-open{
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.2);
     }
+}
 
 
     &__icon{
         fill: var(--text-secondary-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     
     }
 
 }
+
+.products__detalis{
+    display: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--text-primary-color);
+
+    @include min-media($tablet) {
+        line-height: 1.76;
+    }
+    
+    @include min-media($desktop) {
+        font-size: 16px;
+    }
+
+    &.is-open{
+    display: block;
+    padding-bottom: 30px;
+    }
+ 
+}
+
+
+.products__detalis--icon{
+    font-size: 12px;
+    color: var(--text-secondary-color);
+
+    &:hover,
+    &:focus {
+        font-size: 16px;
+    }
+}
+

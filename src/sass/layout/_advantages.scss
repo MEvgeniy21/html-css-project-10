@@ -1,10 +1,15 @@
 
        .advantages{
-        margin-top: 39px;
-        margin-bottom: 43px;
+        background-color: var(--bg-secondary-color);
+        margin-top: 0;
+        margin-bottom: 97px;
         @media screen and (min-width: 768px){
-            margin-top: 44px;
-            margin-bottom: 70px;    
+            margin-top: 0;
+            margin-bottom: 140px;    
+        }
+        @media screen and (min-width: 1200px){
+            margin-top: 0;
+            margin-bottom: 139px;    
         }
        
        }
@@ -14,11 +19,20 @@
             margin: -30px;
            }
        }
+       @media screen and (min-width: 1200px){
+        .advantages__list{
+         margin: -15px;
+        }
+    }
        .advantages__item{
            margin-bottom: 37px;
            @media screen and (min-width: 768px){
             width: calc(100% / 3 - 60px);
             margin: 30px;
+           }
+           @media screen and (min-width: 1200px){
+            width: calc(100% / 3 - 30px);
+            margin: 15px;
            }
 
         &:last-child
@@ -38,6 +52,11 @@
             @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
             margin-bottom: 13px;
         }
+        @media screen and (min-width: 1200px){
+            margin-top: 0;
+            @include font(58px, 66px, 0.04em, 400, var(--font-secondary));
+            margin-bottom: 15px;
+        }
                    
            
             &::before{
@@ -48,6 +67,9 @@
             margin-bottom: 16px;
             @media screen and (min-width: 768px){
                 margin-bottom: 36px;
+            }
+            @media screen and (min-width: 1200px){
+                margin-bottom: 40px;
             }
         }
 
@@ -65,10 +87,6 @@
                    
             }
             &--heart::before{
-                content: "";
-                display: block;
-                background-size: contain;
-                height: 50px;
                 background-image: url(../images/advantages/advantages-3-44.png);
                 width: 44px;
             }
@@ -83,8 +101,12 @@
         margin-top: 0;
         @media screen and (min-width: 768px){
             @include font(14px, 24px, 0.04em, 700, var(--font-primary));   
+            max-width: 180px;
         }
+        @media screen and (min-width: 1200px){
+            @include font(16px, 15px, 0.04em, 700, var(--font-primary));   
+            max-width: 330px;
         }
-
+    }
 
     
