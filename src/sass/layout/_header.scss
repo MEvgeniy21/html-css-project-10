@@ -1,3 +1,6 @@
+body.lock {
+	overflow: hidden;
+}
 .header {
 	position: absolute;
 	width: 100%;
@@ -41,9 +44,14 @@
 	background: rgba(0, 0, 0, 0.2);
 	width: 100vw;
 	height: 100vh;
-	top: 0;
-	right: 0px;
+	top: 0px;
+	right: -100%;
+	transition: all 0.5s ease 0s;
+	&.active {
+		right: 0;
+	}
 }
+
 .mob-menu__wrap {
 	background-color: var(--bg-menu-color);
 	width: 250px;
@@ -167,6 +175,9 @@
 	}
 }
 @include min-media (1200px) {
+	body.lock {
+		overflow: auto;
+	}
 	.header__nav {
 		display: block;
 	} 
@@ -196,4 +207,7 @@
 }
 .current {
 	color: var(--text-secondary-color);
+}
+.hidde {
+	display: none;
 }
