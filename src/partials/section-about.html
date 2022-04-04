@@ -33,7 +33,7 @@
           </li>
           <li class="about__item">Aliquam erat volutpat. Aenean accumsan.</li>
         </ul>
-        <button class="about__button" type="button">
+        <button class="about__button" type="button" data-modal-open>
           Read more
           <svg class="button__vector" width="4.43px" height="8px">
             <use href="./images/icons.svg#icon-Vector-1"></use>
@@ -42,4 +42,30 @@
       </div>
     </div>
   </div>
+  <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="button modal__button" data-modal-close>
+           <svg
+            class="modal__button-icon modal__button-icon--close"
+            width="11"
+            height="11"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+         <p class="modal__title">how it’s made?</p>
+         <ul class="modal__about--list">
+          <li class="modal__about--item">
+            About 70% of the ingredients in ice cream come from milk, although mixes often contain natural ingredients like sugar and fruit.
+          </li>
+          <li class="modal__about--item">
+            Small quantities of stabilisers, flavours, colourings and emulsifiers may also be added to enhance flavour, texture or appearance.
+          </li>
+           <li class="modal__about--item">
+           There are no added preservatives as ice cream is preserved naturally by freezing. As it freezes, the mixture is whipped and blended to give its smoothness.
+          </li>
+        </ul> 
+      </div>
+      </div>
 </section>
+

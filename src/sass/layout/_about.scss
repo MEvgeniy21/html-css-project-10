@@ -65,7 +65,8 @@ padding-right: 46px;
     }
 }
 
-.about__title {
+.about__title,
+.modal__title {
     @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
     @include flex-position(flex, center, center);
     text-align: center;
@@ -97,7 +98,8 @@ padding-right: 46px;
     }
 }
 
-.about__list {
+.about__list,
+.modal__about--list {
     @include font(12px, 19px, null, 500, var(--font-primary));
     margin-bottom: 17px;
 
@@ -117,7 +119,9 @@ padding-right: 46px;
             margin-bottom: 20px;
         }
 }
-
+.modal__about--item:not(:last-child) {
+    margin-bottom: 20px;
+}
 .about__button {
     cursor: pointer;
     @include flex-position(flex, center, center);
@@ -181,4 +185,62 @@ padding-right: 46px;
         padding-right: 0;
         padding-top: 51px;
     }
+}
+.backdrop {
+    width: 100%;
+    height: 100%;
+     background-color: rgba(0, 0, 0, 0.2);;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform var(--primary-cubic-bezier);
+    z-index: 5;
+}
+  
+  .backdrop.is-hidden .modal {
+    transform: rotate(150deg);;
+	transition: transform 250ms var(--primary-cubic-bezier);
+  }
+  .modal {
+    width: 80%;
+    height: 80%;
+    background-color: var(--bg-product1-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform var(--primary-cubic-bezier);
+    padding: 40px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .modal__title {
+      line-height: 1.15;
+    }
+  }
+  .modal__button {
+    position: absolute;
+	top: 10px;
+	right: 7px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 0;
+	background-color: transparent;
+	display: block;
+	margin-left: auto;
+	fill: var(--text-primary-color);
+	transition: fill 250ms var(--primary-cubic-bezier);
+	&:hover,
+	&:focus {
+		fill: var(--btn-bg-hover-secondary-color);
+	} 
+  }
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
