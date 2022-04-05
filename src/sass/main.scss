@@ -11,6 +11,10 @@
 @import './base/general';
 // Паршалы с компонетами использующиеся в проекте
 @import './components/container';
+@import './components/backdrop';
+@import './components/modal-buy-now';
+@import './components/modal-about';
+@import './components/up-scroll';
 
 // Паршалы для секций
 @import './layout/header';
