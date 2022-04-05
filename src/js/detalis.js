@@ -1,13 +1,12 @@
 (() => {
 	const refs = {
 		openDetalBtn: document.querySelector("[data-detalis-open]"),
-		closeDetalBtn: document.querySelector("[data-detalis-close]"),
 		detalis: document.querySelector("[data-detalis]"),
 		text: document.querySelector("[data-text]"),
 	};
 
 	refs.openDetalBtn.addEventListener("click", toggleDetalis);
-	refs.closeDetalBtn.addEventListener("click", toggleDetalis);
+	refs.detalis.addEventListener("click", toggleDetalis);
 	
 
 	function toggleDetalis() {
@@ -18,13 +17,12 @@
 
 	const refs2 = {
 		openDetalBtn2: document.querySelector("[data-detalis-open2]"),
-		closeDetalBtn2: document.querySelector("[data-detalis-close2]"),
 		detalis2: document.querySelector("[data-detalis2]"),
 		text2: document.querySelector("[data-text2]"),
 	};
 
 	refs2.openDetalBtn2.addEventListener("click", toggleDetalis2);
-	refs2.closeDetalBtn2.addEventListener("click", toggleDetalis2);
+	refs2.detalis2.addEventListener("click", toggleDetalis2);
 
 	function toggleDetalis2() {
 		refs2.detalis2.classList.toggle("is-open");
@@ -32,15 +30,15 @@
 		refs2.openDetalBtn2.classList.toggle("is-open");
 	}
 
-		const refs3 = {
-		openDetalBtn3: document.querySelector("[data-detalis-open3]"),
-		closeDetalBtn3: document.querySelector("[data-detalis-close3]"),
-		detalis3: document.querySelector("[data-detalis3]"),
-		text3: document.querySelector("[data-text3]"),
+	const refs3 = {
+	openDetalBtn3: document.querySelector("[data-detalis-open3]"),
+	detalis3: document.querySelector("[data-detalis3]"),
+	text3: document.querySelector("[data-text3]"),
 	};
 
 	refs3.openDetalBtn3.addEventListener("click", toggleDetalis3);
-	refs3.closeDetalBtn3.addEventListener("click", toggleDetalis3);
+	refs3.detalis3.addEventListener("click", toggleDetalis3);
+
 
 	function toggleDetalis3() {
 		refs3.detalis3.classList.toggle("is-open");
