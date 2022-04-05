@@ -129,6 +129,12 @@
 // 	background: var(--bg-primary-color);
 // 	transition-property: transform;
 // 	transition-duration: .25s;
+
+// 		@include min-media($desktop) {
+// 		width: 26px;
+// 		height: 26px;
+// 		margin-top: 20px;
+// 		}
 	
 
 // 	&:hover {
@@ -172,6 +178,11 @@
 		font-size: 8px;
 		line-height: 1.5;
 		color: var(--text-primary-color);
+
+			@include min-media($desktop) {
+				font-size: 14px;
+				line-height: 1.4;
+			}
 
 	}
 
@@ -274,6 +285,7 @@
 	}
 }
 
+
 .hero__text--details {
 	display: block;
 	position: relative;
@@ -284,6 +296,12 @@
 	font-size: 8px;
 	line-height: 1.5;
 	color: var(--text-primary-color);
+
+	@include min-media($desktop) {
+		font-size: 14px;
+		line-height: 1.4;
+		
+	}
 	
 	&::-webkit-details-marker {
 	display: none;
@@ -303,12 +321,13 @@
 	border-radius: 50%;
 	background-color: var(--btn-bg-primary-color);
 
-// 	@include min-media($desktop) {
-// 		width: 26px;
-// 		height: 26px;
-// 		font-size: 11px;
+	@include min-media($desktop) {
+		width: 26px;
+		height: 26px;
+		font-size: 11px;
+		top: 125%;
 
-// }
+}
 }
 
 
