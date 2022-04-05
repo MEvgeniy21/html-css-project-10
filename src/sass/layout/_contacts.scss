@@ -56,6 +56,8 @@
     &:not(:last-child){
         margin-bottom: 20px;
     }
+    transition: 250ms ease-out;
+
     @include min-media(768px){
         &:not(:last-child) {
             margin-bottom: 0px;
@@ -72,6 +74,11 @@
         &:nth-child(n+2){
             margin-left: 0;
         }
+    }
+
+    &:hover,
+    &:focus{
+        transform: scale(1.05);
     }
 }
 
@@ -233,9 +240,10 @@
 .btn-locations {
     background: var(--btn-bg-secondary-color);
     color: var(--btn-bg-primary-color);
+    transition: background-color 250ms var(--primary-cubic-bezier);
     &:hover,
     &:focus {
-        background-color: var(--btn-bg-secondary-color);
+        background-color: var(--btn-bg-hover-secondary-color);
     }
     @include min-media(768px){
         min-width: 198px;
@@ -245,6 +253,7 @@
 .btn-franchise{
     background:var(--btn-bg-primary-color);
     color: var(--btn-bg-secondary-color);
+    transition: background-color 250ms var(--primary-cubic-bezier);
     &:hover,
     &:focus {
         background-color: var(--btn-bg-hover-primary-color);

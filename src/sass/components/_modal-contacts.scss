@@ -1,0 +1,172 @@
+.backdrop__contacts {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.75s ease-out;
+    z-index: 5;
+}
+
+.backdrop__contacts.is-hidden .modal-contacts {
+    transform: translateX(100%);
+    transition: all 0.75s ease-out;
+}
+
+.modal-contacts {
+    width: 80%;
+    height: 80%;
+    background-color: var(--bg-secondary-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.75s ease-out;
+    padding: 30px;
+    background-image: url(../images/contacts/bg-contacts-1280.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    overflow-y: scroll;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/contacts/bg-contacts-1280@2x.png);
+    }
+
+    @include min-media($mobile){
+        padding: 30px 50px 30px 50px;
+    }
+
+    @include min-media($tablet) {
+        padding: 40px 70px 40px 70px;
+        width: 537px;
+        height: 90%;
+    }
+
+    @include min-media($desktop) {
+        width: 90%;
+        height: 60%;
+        padding: 50px 30px;
+        background-image: url(../images/contacts/bg-contacts-1280.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/bg-contacts-1280@2x.png);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .modal-contacts__title {
+        line-height: 1.15;
+    }
+}
+
+.modal-contacts__button {
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    fill: var(--btn-bg-secondary-color);
+    transition: fill 250ms var(--primary-cubic-bezier);
+
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal-contacts__title {
+    @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
+    @include flex-position(flex, center, center);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+
+    color: var(--text-secondary-color);
+
+    @include min-media($tablet) {
+        @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
+    }
+
+    @include min-media($desktop) {
+        @include font(58px, 66px, 0.06em, 400, var(--font-secondary));
+        margin-bottom: 32px;
+    }
+}
+
+.modal-contacts__list {
+    text-align: center;
+    @include min-media($desktop){
+        @include flex-position(flex, center, center);
+    }
+}
+
+.modal-contacts__item{
+    box-shadow: 0 10px 10px -5px rgb(0 0 0 / 30%);
+    background-color: var(--bg-primary-color);
+    transition: 250ms ease-out;
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+    }
+    &:not(:last-child){
+        margin-bottom: 15px;
+        @include min-media(768px) {
+            margin-bottom: 20px;
+        }
+        @include min-media($desktop) {
+            // width: calc(100% / 3 - 20px)
+            margin-bottom: 0;
+            // margin-right: 20px;
+            &:not(:last-child){
+            margin-right: 20px;
+            }
+        }
+    }
+}
+
+.modal-contacts__text{
+    min-width: 161px;
+    margin: 0 auto;
+    border-radius: 22px;
+    @include font(16px, 21px, null, 700, var(--font-primary));
+    border: none;
+    background:var(--btn-bg-primary-color);
+    color: var(--btn-bg-secondary-color);
+    transition: background-color 250ms var(--primary-cubic-bezier);
+    padding-top: 15px ;
+
+    @include min-media(768px) {
+        min-width: 180px;
+        @include font(18px, 30px, null, 700, var(--font-primary));
+    }
+
+    @include min-media($desktop){
+        @include font(22px, 24px, null, 700, var(--font-primary));
+    }
+}
+
+.location{
+    width: 100%;
+    height: 250px;
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+    margin-top: 15px; 
+}
