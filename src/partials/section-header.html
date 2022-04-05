@@ -73,58 +73,58 @@
       </div>
     </div>
   </div>
-  <div class="backdrop">
-    <div class="modal">
-      <button type="button" class="modal__btn">
+  <div class="backdrop-header">
+    <div class="header-modal">
+      <button type="button" class="header-modal__button">
         <svg class="modal__close" width="18" height="18">
           <use href="./images/icons.svg#icon-close">
           </use>
         </svg>
       </button>
-      <form class="modal__form js-speaker-form">
-        <div class="modal__form-wrap">
-          <fieldset class="modal__field">
-            <legend class="modal__titl">Your wish</legend>
-            <label class="modal__box">
+      <form class="header-modal__form">
+        <div class="header-modal__form-wrap">
+          <fieldset class="header-modal__field">
+            <legend class="header-modal__title">Your wish</legend>
+            <label class="header-modal__box">
               <img src="./images/products/product-1-220.png" alt="ice cream" width="50" height="50">
-              <input class="modal__inout" type="checkbox" name="product" value="ice cream">
+              <input class="header-modal__input" type="checkbox" name="product" value="ice cream">
               Ice cream
             </label>
-            <label class="modal__box">
+            <label class="header-modal__box">
               <img src="./images/products/product-2-220.png" alt="ice cream" width="50" height="50">
-              <input class="modal__inout" type="checkbox" name="product" value="ice coffee">
+              <input class="header-modal__input" type="checkbox" name="product" value="ice coffee">
               Ice coffee
             </label>
-            <label class="modal__box">
+            <label class="header-modal__box">
               <img src="./images/products/product-3-220.png" alt="ice cream" width="50" height="50">
-              <input class="modal__inout" type="checkbox" name="product" value="milkshakes">
+              <input class="header-modal__input" type="checkbox" name="product" value="milkshakes">
               Milkshakes
             </label>
           </fieldset>
-          <fieldset class="modal__field">
-          <legend class="modal__titl">Your info</legend>
-          <div class="modal__wrap">
-            <label class="modal__text" for="user-name">Name</label>
-            <div class="modal__form-wrap">
-              <input type="text" name="name" id="client-name" class="modal__input" required/>
+          <fieldset class="header-modal__field">
+          <legend class="header-modal__title">Your info</legend>
+          <div class="header-modal__wrap">
+            <label class="header-modal__text" for="user-name">Name</label>
+            <div class="header-modal__input-wrap">
+              <input type="text" name="client-name" id="user-name" class="modal__input" required/>
             </div>
           </div>
-          <div class="modal__wrap">
-            <label class="modal_text" for="tel">Phone</label>
-            <div class="modal__form-wrap">
-            <input type="number" id="client-tel" title="+380" id="tel" class="modal__input" required />
+          <div class="header-modal__wrap">
+            <label class="header-modal__text" for="tel">Phone</label>
+            <div class="header-modal__input-wrap">
+            <input type="tel" name="client-tel" id="tel" title="+380" id="tel" class="modal__input" required />
             </div>
           </div>
-          <div class="modal__wrap">
-            <label class="modal__text" for="email">Email</label>
-            <div class="modal__form-wrap">
-            <input type="email" id="client-email" id="email" class="modal__input" required/>
+          <div class="header-modal__wrap">
+            <label class="header-modal__text" for="email">Email</label>
+            <div class="header-modal__input-wrap">
+            <input type="email" name="client-email" id="email" id="email" class="modal__input" required/>
             </div>
           </div>
           </fieldset>
         </div>
-        <div class="modal__sub-button">
-          <button class="modal__submit header__button" type="submit">Well Done</button>
+        <div class="header-modal__sub-button">
+          <button class="header-modal__submit header__button" type="submit">Well Done</button>
         </div>
       </form>    
     </div>

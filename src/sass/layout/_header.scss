@@ -160,7 +160,7 @@ body.lock {
 	}
 }
 // ===========================MODAL-MENU===========================================================================================
-.backdrop {
+.backdrop-header {
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -173,7 +173,7 @@ body.lock {
 		left: 0;
 	}
 }
-.modal {
+.header-modal {
 	min-height: 81px;
 	background: var(--bg-hero-primary-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -185,7 +185,7 @@ body.lock {
 	transform: translate(-50%, 0);
 	padding: 25px;
 }
-.modal__btn {
+.header-modal__button {
 	position: absolute;
 	top: 10px;
 	right: 7px;
@@ -203,7 +203,10 @@ body.lock {
 		fill: var(--btn-bg-hover-secondary-color);
 	} 
 }
-.modal__field {
+.header-modal__form-wrap {
+	margin-bottom: 20px;
+}
+.header-modal__field {
 	width: 200px;
 	@include font(14px, 18px, 0.09em, 700, var(--font-primary));
 	color: var(--text-secondary-color);
@@ -213,18 +216,18 @@ body.lock {
 		margin-top: 10px;
 	}
 }
-.modal__titl {
+.header-modal__title {
 	@include font(16px, 18px, 0.09em, 700, var(--font-primary));
 	color: var(--text-primary-color);
 	text-align: center
 }
-.modal__box {
+.header-modal__box {
 	@include flex-position(flex, center, space-around); 
 	& + & {
 		margin-top: 20px;
 	}	
 }
-.modal__wrap {
+.header-modal__wrap {
 	height: 65px;
 	& input {
 		margin: 0;
@@ -233,13 +236,10 @@ body.lock {
 		border: 2px solid rgba(247, 88, 154, 0.6);
 	}
 }
-.modal__form-wrap {
-	margin-bottom: 20px;
-}
-.modal__sub-button {
+.header-modal__sub-button {
 	@include flex-position(flex, center, center); 
 }
-.modal__submit {
+.header-modal__submit {
 	padding: 8px 20px;
 }
 // ============================TABLET========================================================================================	
@@ -289,16 +289,16 @@ body.lock {
 		bottom: 30px;
 		right: 30px;
 	}
-	.modal {
+	.header-modal {
 		width: 550px;
 		background: rgba(253, 160, 183, 0.6);
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}	
-	.modal__form-wrap {
+	.header-modal__form-wrap {
 		@include flex-position(flex, center, space-around); 
 	}
-	.modal__field {
+	.header-modal__field {
 		& + & {
 			margin-top: 0;
 		}
