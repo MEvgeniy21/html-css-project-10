@@ -280,12 +280,14 @@
 
 
 	.box-text-wrap {
+		width: 114px;
 		height: 73px;
 		position: absolute;
 		bottom: 8px;
 		right: -95px;
 
 		@media screen and (min-width: 1200px) {
+			width: 200px;
 			bottom: 55px;
 			right: -210px;
 		}
