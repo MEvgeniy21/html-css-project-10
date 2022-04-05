@@ -29,6 +29,7 @@
 	if (closeMenuModal) {
 		closeMenuModal.addEventListener("click", function() {
 			document.body.classList.remove('lock_modal');
+			document.body.classList.remove('lock');
 			menuOpModal.classList.remove('open');
 			menuMobBurg.classList.remove('active');
 			openMobMenu.classList.remove('hidde');
