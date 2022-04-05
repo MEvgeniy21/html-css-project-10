@@ -77,9 +77,36 @@
 		
 	    }
 	}
+
+@media screen and (min-width: 1200px) {
+
+	font-size: 38px;
+	line-height: 1.15;
+	width: 277px;
+
+	& span {
+		font-size: 58px;
+		line-height: 1.11;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+
+		
+	}
+
+	&::after {
+
+		width: 538px;
+		height: 538px;
+		top: -53px;
+		left: 380px;
+
+	}
+}
+
 }
 .hero__button {
 	@include font(8px, 10px, null, 400, var(--font-primary));
+	display: inline-block;
 	color: var(--text-primary-color);
 	padding: 8px 15px;
 	background: var(--btn-bg-secondary-color);
@@ -100,6 +127,12 @@
 	&_red:focus {
 		background-color: var(--btn-bg-hover-primary-color);	
 	}
+	@media screen and (min-width: 1200px) {
+		
+		font-size: 14px;
+		line-height: 1.28;
+		
+	}
 }
 
 
@@ -110,6 +143,10 @@
 
 	@media screen and (min-width: 768px) {
 		display: block;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-left: 31px;
 	}
 	
 }
@@ -158,6 +195,12 @@
 		letter-spacing: .04em;
 		text-transform: uppercase;
 		color: var(--text-secondary-color);
+
+		@media screen and (min-width: 1200px) {
+			font-size: 46px;
+			line-height: 1.15;
+					
+		}
 	}
 
 	.box__text {
@@ -187,13 +230,18 @@
 	}
 
 	.white-elipse-second, .white-elipse-first {
-			display: block;
-			width: 16px;
-			height: 16px;
-			border-radius: 50%;
-			background-color: var(--bg-primary-color);
-			position: relative;
-			}
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: var(--bg-primary-color);
+		position: relative;
+
+		@media screen and (min-width: 1200px) {
+			width: 30px;
+			height: 30px;
+		}
+		}
 
 	.white-elipse-first {
 		margin-bottom: 35px;
@@ -223,6 +271,11 @@
 		height: 104px;
 		margin-bottom: 72px;
 		padding-left: 150px;
+
+		@media screen and (min-width: 1200px) {
+		margin-bottom: 109px;
+		padding-left: 260px;
+		}
 	}
 
 
@@ -231,13 +284,24 @@
 		position: absolute;
 		bottom: 8px;
 		right: -95px;
+
+		@media screen and (min-width: 1200px) {
+			bottom: 55px;
+			right: -210px;
+		}
 	}
 
 	.first_box {
 
 		@media screen and (min-width: 768px) {
-			width: 162px;
+			
 			padding-top: 102px;
+		}
+
+		@media screen and (min-width: 1200px) {
+		
+			padding-top: 171px;
+			padding-left: 69px;
 		}
 		
 	}
@@ -261,6 +325,10 @@
 		bottom: 0;
 		animation: pulsing 2s;
 
+	}
+
+	@media screen and (min-width: 1200px) {
+		right: 330px;
 	}
 
 }
