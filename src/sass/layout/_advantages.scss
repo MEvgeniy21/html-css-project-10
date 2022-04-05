@@ -16,12 +16,18 @@
        @media screen and (min-width: 768px){
            .advantages__list{
             display: flex;
-            margin: -30px;
+         margin-top: 0;
+         margin-right: -30px;
+         margin-left: -30px;
+         margin-bottom: -30px;
            }
        }
        @media screen and (min-width: 1200px){
         .advantages__list{
-         margin: -15px;
+         margin-top: 0;
+         margin-right: -15px;
+         margin-left: -15px;
+         margin-bottom: -15px;
         }
     }
        .advantages__item{
