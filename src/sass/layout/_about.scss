@@ -1,6 +1,6 @@
 .about {
     width: 100%; 
-    padding-top: 121px; 
+    padding-top: 125px; 
     padding-bottom: 39px;
     background-color: var(--bg-secondary-color);
     background-image: url(../images/about/bg-milk-320.png);
@@ -65,8 +65,7 @@ padding-right: 46px;
     }
 }
 
-.about__title,
-.modal__title {
+.about__title {
     @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
     @include flex-position(flex, center, center);
     text-align: center;
@@ -78,7 +77,7 @@ padding-right: 46px;
         @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
         margin-bottom: 50px;
 }
-@include min-media($tablet) {
+@include min-media($desktop) {
     @include font(58px, 66px, 0.06em, 400, var(--font-secondary));
     margin-bottom: 55px;
 }
@@ -214,9 +213,29 @@ padding-right: 46px;
     transform: translate(-50%, -50%);
     transition: transform var(--primary-cubic-bezier);
     padding: 40px;
-    background-image: url(../images/about/bg-milk-1280.png);
-  }
-  
+    background-image: url(../images/about/bg-milk-320.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow-y: scroll;
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/about/bg-milk-320@2x.png);
+    }
+    @include min-media($tablet) {
+        overflow-y: hidden;
+    }
+    @include min-media($desktop) {
+        background-image: url(../images/about/bg-milk-1280.png);
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/about/bg-milk-1280@2x.png);
+        }
+    }
+}
   @media screen and (min-width: 1200px) {
     .modal__title {
       line-height: 1.15;
@@ -244,4 +263,21 @@ padding-right: 46px;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+}
+.modal__title {
+    @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
+    @include flex-position(flex, center, center);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+
+    color: var(--text-secondary-color);
+    @include min-media($tablet) {
+        @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
+        margin-bottom: 50px;
+}
+@include min-media($desktop) {
+    @include font(58px, 66px, 0.06em, 400, var(--font-secondary));
+    margin-bottom: 55px;
+}
 }
