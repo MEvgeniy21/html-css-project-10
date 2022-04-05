@@ -97,8 +97,7 @@ padding-right: 46px;
     }
 }
 
-.about__list,
-.modal__about--list {
+.about__list {
     @include font(12px, 19px, null, 500, var(--font-primary));
     margin-bottom: 17px;
 
@@ -280,4 +279,18 @@ padding-right: 46px;
     @include font(58px, 66px, 0.06em, 400, var(--font-secondary));
     margin-bottom: 55px;
 }
+}
+.modal__about--list {
+    @include font(12px, 19px, null, 500, var(--font-primary));
+    margin-bottom: 17px;
+
+    color: var(--text-content-secondary-color);
+    @include min-media($tablet) {
+        @include font(16px, 25px, 0.04em, 500, var(--font-primary));
+    margin-bottom: 62px;
+    }
+    @include min-media($desktop) {
+        @include font(18px, 27px, 0.04em, 500, var(--font-primary));
+        margin-bottom: 45px;
+    }
 }
