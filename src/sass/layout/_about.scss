@@ -196,7 +196,7 @@ padding-right: 46px;
     z-index: 5;
 }
   
-  .backdrop__about.is-hidden .modal {
+  .backdrop__about.is-hidden .modal__about {
     transform: translateX(100%);
 	transition: all 0.75s ease-out;
   }
