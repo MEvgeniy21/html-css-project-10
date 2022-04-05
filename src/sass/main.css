@@ -1373,17 +1373,17 @@ body.lock {
   }
 }
 
-.about__item:not(:last-child) {
+.about__text-info:not(:last-child) {
   margin-bottom: 5px;
 }
 
 @media screen and (min-width: 1200px) {
-  .about__item:not(:last-child) {
+  .about__text-info:not(:last-child) {
     margin-bottom: 20px;
   }
 }
 
-.modal__about--item:not(:last-child) {
+.modal__about--text-info:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -1515,20 +1515,16 @@ body.lock {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform var(--primary-cubic-bezier);
-  transition: -webkit-transform var(--primary-cubic-bezier);
-  transition: transform var(--primary-cubic-bezier);
-  transition: transform var(--primary-cubic-bezier), -webkit-transform var(--primary-cubic-bezier);
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
   z-index: 5;
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: rotate(150deg);
-          transform: rotate(150deg);
-  -webkit-transition: -webkit-transform 250ms var(--primary-cubic-bezier);
-  transition: -webkit-transform 250ms var(--primary-cubic-bezier);
-  transition: transform 250ms var(--primary-cubic-bezier);
-  transition: transform 250ms var(--primary-cubic-bezier), -webkit-transform 250ms var(--primary-cubic-bezier);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .modal {
@@ -1543,11 +1539,9 @@ body.lock {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform var(--primary-cubic-bezier);
-  transition: -webkit-transform var(--primary-cubic-bezier);
-  transition: transform var(--primary-cubic-bezier);
-  transition: transform var(--primary-cubic-bezier), -webkit-transform var(--primary-cubic-bezier);
-  padding: 40px;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
+  padding: 30px;
   background-image: url(../images/about/bg-milk-320.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1564,11 +1558,15 @@ body.lock {
 @media screen and (min-width: 768px) {
   .modal {
     overflow-y: hidden;
+    padding: 40px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
+    width: 70%;
+    height: 70%;
+    padding: 50px;
     background-image: url(../images/about/bg-milk-1280.png);
   }
 }
