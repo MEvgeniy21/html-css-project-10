@@ -236,10 +236,10 @@ body.lock {
 .modal__form-wrap {
 	margin-bottom: 20px;
 }
-.modal__button {
+.modal__sub-button {
 	@include flex-position(flex, center, center); 
 }
-.modal__sunmit {
+.modal__submit {
 	padding: 8px 20px;
 }
 // ============================TABLET========================================================================================	
