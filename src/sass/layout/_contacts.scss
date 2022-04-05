@@ -1,17 +1,41 @@
 .contacts{
-    background: var(--bg-secondary-color);
+    background-image: linear-gradient(to bottom,
+        var(--bg-primary-color) 87px,
+        var(--bg-secondary-color) 87px,
+        var(--bg-secondary-color) 100%);
+        @include min-media(768px) {
+            background-image: linear-gradient(to bottom,
+                var(--bg-primary-color) 78px,
+                var(--bg-secondary-color) 78px,
+                var(--bg-secondary-color) 100%);
+        }
+        @include min-media(1200px) {
+            background-image:
+            url(../images/contacts/bg-contacts-1280.png),
+            linear-gradient(to bottom,
+            var(--bg-primary-color) 109px,
+            var(--bg-secondary-color) 0px,
+            var(--bg-secondary-color) 100%);
+            background-repeat: no-repeat;
+            // background-position:center;
+            background-size: contain;  
+            background-position-y: 109px, 0 ; 
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx){
+                background-image: url(../images/contacts/bg-contacts-1280@2x.png),
+                linear-gradient(to bottom,
+                    var(--bg-primary-color) 109px,
+                    var(--bg-secondary-color) 0px,
+                    var(--bg-secondary-color) 100%);
+            }
+        }
 }
 
 .container-contacts{
-    padding-top: 43px;
-    padding-bottom: 57px;
+    padding-bottom: 113px;
     @include min-media(768px){
-        padding-top: 59px;
-        padding-bottom: 79px;
-    }
-    @include min-media(1200px) {
-        padding-top: 66px;
-        padding-bottom: 82.5px;
+        padding-bottom: 165px;
     }
 }
 
@@ -209,6 +233,10 @@
 .btn-locations {
     background: var(--btn-bg-secondary-color);
     color: var(--btn-bg-primary-color);
+    &:hover,
+    &:focus {
+        background-color: var(--btn-bg-secondary-color);
+    }
     @include min-media(768px){
         min-width: 198px;
     }
