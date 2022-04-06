@@ -1,17 +1,24 @@
 .gallery {
-    background-image: linear-gradient(to bottom,
-            var(--bg-secondary-color) 40%,
-            var(--bg-primary-color) 40%,
-            var(--bg-primary-color) 100%);
-
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-secondary-color) 40%,
+    var(--bg-primary-color) 40%,
+    var(--bg-primary-color) 100%
+  );
 }
 
 .photo {
-    margin-right: auto;
-    margin-left: auto;
-    transition: 500ms;
+  margin-right: auto;
+  margin-left: auto;
+  transition: 500ms;
 }
 
+// .photo:hover {
+//     transform: scale(1.2);
+// }
+
 .photo:hover {
-    transform: scale(1.2);
+  @include media-span($min-width, $tablet) {
+    transform: scale(1.1);
+  }
 }
