@@ -96,22 +96,26 @@
         padding-right: 35px;
     }
     &::before {
-        content: '\275E';
+        content: '';
         position: absolute;
-        z-index: 1;        
+        z-index: 1;
         display: block;
-        left: 0;
-        top: 0;
-        transform: translate(10px,-55px);
-        font-size: 110px;
-        color: var(--lines-reviews-color);
+        background-image: url('/images/reviews/reviews-quotes.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 40px;
+        left: 11px;
+        top: -15px;
         @include min-media($tablet) {
-            transform: translate(-15px,-55px);
-        }        
-        @include min-media($desktop) {
-            transform: translate(-10px,-55px);
+            left: -20px;
+            top: -17px;
         }
-        // outline: 1px solid yellow;
+        
+        @include min-media($desktop) {
+            left: -9px;
+            top: -15px;
+        }
     }
     // outline: 1px solid yellow;
 
