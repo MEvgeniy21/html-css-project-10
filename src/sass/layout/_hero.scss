@@ -128,7 +128,7 @@
 		background-color: var(--btn-bg-hover-primary-color);	
 	}
 	@media screen and (min-width: 1200px) {
-		
+		padding: 11px 23px;
 		font-size: 14px;
 		line-height: 1.28;
 		
@@ -211,6 +211,12 @@
 		line-height: 10px;
 		text-align: right;
 		color: var(--text-primary-color);
+
+		@media screen and (min-width: 1200px) {
+			font-size: 14px;
+			line-height: 1.28;
+			min-inline-size: max-content;
+		}
 }
 	
 
@@ -245,13 +251,17 @@
 
 	.white-elipse-first {
 		margin-bottom: 35px;
+
+		@media screen and (min-width: 1200px) {
+			margin-bottom: 62px;
+		}
 	}
 	
 	.box {
-			position: absolute;
-			right: 56%;
-			top: 5%;
-			}
+		position: absolute;
+		right: 56%;
+		top: 5%;
+		}
 	
 	.hero_right {
 		display: none;
@@ -275,6 +285,7 @@
 		@media screen and (min-width: 1200px) {
 		margin-bottom: 109px;
 		padding-left: 260px;
+		height: 168px;
 		}
 	}
 
@@ -284,7 +295,7 @@
 		height: 73px;
 		position: absolute;
 		bottom: 8px;
-		right: -95px;
+		right: -130px;
 
 		@media screen and (min-width: 1200px) {
 			width: 200px;
@@ -377,8 +388,37 @@
 	display: none;
 }
 
-&::before {
-	content: "\2794";
+// &::before {
+// 	content: "\2794";
+// 	display: flex;
+// 	position: absolute;
+// 	top: 115%;
+// 	align-items: center;
+// 	justify-content: center;
+// 	color: var(--text-secondary-color);
+// 	font-size: 8px;
+// 	width: 18px;
+// 	height: 18px;
+// 	border-radius: 50%;
+// 	background-color: var(--btn-bg-primary-color);
+
+// 	@include min-media($desktop) {
+// 		width: 26px;
+// 		height: 26px;
+// 		font-size: 11px;
+// 		top: 125%;
+
+// }
+// }
+
+
+// details[open]>&::before {
+// 	content: '';
+// 	background-color: transparent;
+// }
+}
+
+.hero__text--details-btn {
 	display: flex;
 	position: absolute;
 	top: 115%;
@@ -390,19 +430,22 @@
 	height: 18px;
 	border-radius: 50%;
 	background-color: var(--btn-bg-primary-color);
+	cursor: pointer;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
 	@include min-media($desktop) {
 		width: 26px;
 		height: 26px;
 		font-size: 11px;
 		top: 125%;
-
+	}
 }
+
+.hero__text--details-btn:hover {
+	transform: scale(1.2);
 }
 
-
-details[open]>&::before {
-	content: '';
-	background-color: transparent;
-}
+details[open] .hero__text--details-btn {
+	display: none;
+	// left: -40px;
 }
