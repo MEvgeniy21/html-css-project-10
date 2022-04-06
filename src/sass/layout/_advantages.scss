@@ -9,13 +9,14 @@
   @media screen and (min-width: 1200px) {
     margin-top: 0;
     padding-bottom: 139px;
-  }
 
-  & .container {
-    padding-left: 75px;
-    padding-right: 75px;
+    & .container {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
   }
 }
+
 @media screen and (min-width: 768px) {
   .advantages__list {
     display: flex;
