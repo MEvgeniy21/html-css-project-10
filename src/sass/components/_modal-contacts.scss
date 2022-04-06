@@ -49,8 +49,8 @@
   }
 
   @include min-media($desktop) {
-    width: 90%;
-    height: 60%;
+    width: 1080px;
+    height: 550px;
     padding: 50px 30px;
     background-image: url(../images/contacts/bg-contacts-1280.png);
 
@@ -127,9 +127,7 @@
       margin-bottom: 20px;
     }
     @include min-media($desktop) {
-      // width: calc(100% / 3 - 20px)
       margin-bottom: 0;
-      // margin-right: 20px;
       &:not(:last-child) {
         margin-right: 20px;
       }
