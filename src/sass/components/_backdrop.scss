@@ -8,8 +8,7 @@
   background-color: var(--bg-backdrop);
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s var(--primary-cubic-bezier),
-    visibility 0.3s var(--primary-cubic-bezier);
+  transition: opacity 0.3s var(--primary-cubic-bezier), visibility 0.3s var(--primary-cubic-bezier);
 
   &.backdrop-close {
     visibility: hidden;
@@ -19,16 +18,15 @@
 }
 
 .backdrop-header {
-	z-index: 2;
+  z-index: 2;
   visibility: hidden;
   overflow: auto;
   opacity: 0;
-	&.open {
+  &.open {
     opacity: 1;
     visibility: visible;
-    
-	}
-
+  }
+}
 .backdrop__about {
   width: 100vw;
   height: 100vh;
