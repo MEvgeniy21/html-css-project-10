@@ -17,6 +17,7 @@
     pointer-events: none;
   }
 }
+
 .backdrop-header {
 	z-index: 2;
   visibility: hidden;
@@ -27,4 +28,19 @@
     visibility: visible;
     
 	}
+
+.backdrop__about {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-backdrop);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s ease-out;
+  z-index: 5;
+}
+.backdrop__about.is-hidden .modal__about {
+  transform: translateX(100%);
+  transition: all 0.75s ease-out;
 }
