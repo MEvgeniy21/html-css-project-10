@@ -13,8 +13,8 @@
 
 .grid-items {
   display: grid;
-  grid-template-columns: repeat(7, 137px);
-  grid-template-rows: repeat(3, 137px);
+  grid-template-columns: repeat(7, minmax(50px, 33.33333%));
+  grid-template-rows: repeat(3, minmax(50px, 137px));
   gap: 5px;
   padding-left: 60px;
 }
@@ -82,10 +82,14 @@
 
 .grid-img {
   position: absolute;
+  height: 100%;
+  width: 100%;
   filter: grayscale(0);
   transition: 1s;
 }
 
 .grid-img:hover {
   filter: grayscale(1);
+  transform: scale(1.2);
+  z-index: 999;
 }
