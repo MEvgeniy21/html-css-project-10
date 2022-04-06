@@ -1,9 +1,11 @@
 (() => {
 	const openMenu = document.querySelector('.header__open-burger');
 	const menuBurg = document.querySelector('.mob-menu');
+	const backdropMenu = document.querySelector('.backdrop-header')
 	if (openMenu) {
 		openMenu.addEventListener("click", function() {
 			document.body.classList.toggle('lock');
+			backdropMenu.classList.toggle('open');
 			menuBurg.classList.toggle('active');
 			openMenu.classList.toggle('hidde');
 		})
@@ -12,6 +14,7 @@
 	if (closeMenu) {
 		closeMenu.addEventListener("click", function() {
 			document.body.classList.remove('lock');
+			backdropMenu.classList.remove('open');
 			menuBurg.classList.remove('active');
 			openMenu.classList.remove('hidde');
 		})
@@ -21,6 +24,7 @@
 		closeProd.addEventListener("click", function () {
 				document.body.classList.remove('lock');
 				menuBurg.classList.remove('active');
+				backdropMenu.classList.remove('open');
 				openMenu.classList.remove('hidde');
 			})
 	}
@@ -29,6 +33,7 @@
 		closeAb.addEventListener("click", function () {
 				document.body.classList.remove('lock');
 				menuBurg.classList.remove('active');
+				backdropMenu.classList.remove('open');
 				openMenu.classList.remove('hidde');
 			})
 	}
@@ -37,6 +42,7 @@
 		closeGal.addEventListener("click", function () {
 				document.body.classList.remove('lock');
 				menuBurg.classList.remove('active');
+				backdropMenu.classList.remove('open');
 				openMenu.classList.remove('hidde');
 			})
 	}
@@ -45,6 +51,7 @@
 		closeCon.addEventListener("click", function () {
 				document.body.classList.remove('lock');
 				menuBurg.classList.remove('active');
+				backdropMenu.classList.remove('open');
 				openMenu.classList.remove('hidde');
 			})
 	}

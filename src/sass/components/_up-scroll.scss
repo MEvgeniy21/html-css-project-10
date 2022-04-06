@@ -1,0 +1,33 @@
+.topbutton {
+	width: 60px;
+	height: 60px;
+	@include flex-position(flex, center, center);
+	position:fixed;
+	z-index: 1;
+	bottom: 10px;
+	right: 10px;
+	cursor:pointer;
+	color: var(--bg-hero-primary-color);
+	@include font(26px, 29.77px, 0.04em, 400, var(--font-secondary));
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	opacity: 0.5;
+	transition: opacity 0.3s var(--primary-cubic-bezier);
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+	& span {
+		@include font(20px, 29.77px, 0.04em, 400, var(--font-primary));
+	}
+}
+@include min-media (768px) {
+	.topbutton {
+		width: 70px;
+		height: 70px;
+		bottom: 30px;
+		right: 30px;
+	}
+}
