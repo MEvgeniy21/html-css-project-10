@@ -16,7 +16,7 @@
 	}
 
 	const refs2 = {
-	  openDetalBtn2: document.querySelector("[data-detalis-open2]"),
+		openDetalBtn2: document.querySelector("[data-detalis-open2]"),
 		detalis2: document.querySelector("[data-detalis2]"),
 		text2: document.querySelector("[data-text2]"),
 	};
@@ -30,14 +30,15 @@
 		refs2.openDetalBtn2.classList.toggle("is-open");
 	}
 
-		const refs3 = {
-	  openDetalBtn3: document.querySelector("[data-detalis-open3]"),
-		detalis3: document.querySelector("[data-detalis3]"),
-		text3: document.querySelector("[data-text3]"),
+	const refs3 = {
+	openDetalBtn3: document.querySelector("[data-detalis-open3]"),
+	detalis3: document.querySelector("[data-detalis3]"),
+	text3: document.querySelector("[data-text3]"),
 	};
 
 	refs3.openDetalBtn3.addEventListener("click", toggleDetalis3);
 	refs3.detalis3.addEventListener("click", toggleDetalis3);
+
 
 	function toggleDetalis3() {
 		refs3.detalis3.classList.toggle("is-open");

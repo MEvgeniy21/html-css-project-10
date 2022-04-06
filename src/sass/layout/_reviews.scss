@@ -37,24 +37,20 @@
     // max-height: 308px;
     width: 100%;
         &::after {
-        content: '';
+        content: '. . .';
         position: absolute;
         display: inline-block;
-        background-image: url('/images/reviews/reviews-ellipse.svg'),
-        url('/images/reviews/reviews-ellipse.svg'),
-        url('/images/reviews/reviews-ellipse.svg');
-        background-size: 4px 4px, 4px 4px, 4px 4px;
-        background-position: left,center,right;
-        background-repeat: no-repeat;
-        width: 30px;
-        height: 4px;
+        // width: 32px;
+        height: 33px;
         left: 50%;
         transform: translateX(-50%);
         bottom: -30px;
+        font-size: 32px;
+        color: var(--btn-bg-hover-secondary-color);
         @include min-media($desktop) {
             bottom: -15px;
         }
-
+// outline: 1px solid tomato;
         
     }
     @include min-media($tablet) {

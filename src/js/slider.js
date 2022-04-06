@@ -1,10 +1,10 @@
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("marker");
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("marker");
     for (i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";  
     }

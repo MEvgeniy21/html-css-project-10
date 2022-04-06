@@ -1,0 +1,44 @@
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-backdrop);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s var(--primary-cubic-bezier), visibility 0.3s var(--primary-cubic-bezier);
+
+  &.backdrop-close {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.backdrop-header {
+  z-index: 2;
+  visibility: hidden;
+  overflow: auto;
+  opacity: 0;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.backdrop__about {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-backdrop);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s ease-out;
+  z-index: 5;
+}
+.backdrop__about.is-hidden .modal__about {
+  transform: translateX(100%);
+  transition: all 0.75s ease-out;
+}
