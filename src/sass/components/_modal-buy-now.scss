@@ -1,104 +1,106 @@
 .header-modal {
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: -100vw;
-	position: fixed;
-	transition: left 0.5s var(--primary-cubic-bezier);
-	overflow: auto;
-	z-index: 7;
-	&._open {
-		left: 0;
-	}
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: -100vw;
+  position: fixed;
+  transition: left 0.5s var(--primary-cubic-bezier), visibility 0.5s var(--primary-cubic-bezier);
+  overflow: auto;
+  z-index: 7;
+  visibility: hidden;
+  &._open {
+    left: 0;
+    visibility: visible;
+  }
 }
 .header-modal__wrapper {
-	min-height: 81px;
-	background: var(--bg-modal-header);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-	0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 30px;
-	position: absolute;
-	z-index: 8;
-	left: 50%;
-	transform: translate(-50%, 0);
-	padding: 25px;
+  min-height: 81px;
+  background: var(--bg-modal-header);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  position: absolute;
+  z-index: 8;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 25px;
 }
 .header-modal__button {
-	position: absolute;
-	top: 10px;
-	right: 7px;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 0;
-	background-color: transparent;
-	display: block;
-	margin-left: auto;
-	fill: var(--text-primary-color);
-	transition: fill 250ms var(--primary-cubic-bezier);
-	&:hover,
-	&:focus {
-		fill: var(--btn-bg-hover-secondary-color);
-	} 
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  fill: var(--text-primary-color);
+  transition: fill 250ms var(--primary-cubic-bezier);
+  &:hover,
+  &:focus {
+    fill: var(--btn-bg-hover-secondary-color);
+  }
 }
 .header-modal__form-wrap {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .header-modal__field {
-	width: 200px;
-	@include font(14px, 18px, 0.09em, 700, var(--font-primary));
-	color: var(--text-secondary-color);
-	border: 2px solid var(--modal-border);
-	border-radius: 20px;
-	& + & {
-		margin-top: 10px;
-	}
+  width: 200px;
+  @include font(14px, 18px, 0.09em, 700, var(--font-primary));
+  color: var(--text-secondary-color);
+  border: 2px solid var(--modal-border);
+  border-radius: 20px;
+  & + & {
+    margin-top: 10px;
+  }
 }
 .header-modal__title {
-	@include font(16px, 18px, 0.09em, 700, var(--font-primary));
-	color: var(--text-primary-color);
-	text-align: center
+  @include font(16px, 18px, 0.09em, 700, var(--font-primary));
+  color: var(--text-primary-color);
+  text-align: center;
 }
 .header-modal__box {
-	@include flex-position(flex, center, space-around); 
-	& + & {
-		margin-top: 20px;
-	}	
+  @include flex-position(flex, center, space-around);
+  & + & {
+    margin-top: 20px;
+  }
 }
 .header-modal__wrap {
-	height: 65px;
-	& input {
-		margin: 0;
-		padding: 5px 5px 5px 10px;
-		border-radius: 4px;
-		border: 2px solid var(--modal-border);
-	}
+  height: 65px;
+  & input {
+    margin: 0;
+    padding: 5px 5px 5px 10px;
+    border-radius: 4px;
+    border: 2px solid var(--modal-border);
+  }
 }
 .header-modal__input-wrap {
-	& input {
-		background-color: var(--bg-hero-primary-color);
-	}
+  & input {
+    background-color: var(--bg-hero-primary-color);
+  }
 }
 .header-modal__sub-button {
-	@include flex-position(flex, center, center); 
+  @include flex-position(flex, center, center);
 }
 .header-modal__submit {
-	padding: 8px 20px;
+  padding: 8px 20px;
 }
 // ===============TABLET==========================================================================
-@include  min-media (768px) {
-	.header-modal__wrapper {
-		width: 550px;
-		background: var(--bg-modal-header);
-		transform: translate(-50%, 0);
-		margin-top: 50px
-	}	
-	.header-modal__form-wrap {
-		@include flex-position(flex, center, space-around); 
-	}
-	.header-modal__field {
-		& + & {
-			margin-top: 0;
-		}
-	}
+@include min-media(768px) {
+  .header-modal__wrapper {
+    width: 550px;
+    background: var(--bg-modal-header);
+    transform: translate(-50%, 0);
+    margin-top: 50px;
+  }
+  .header-modal__form-wrap {
+    @include flex-position(flex, center, space-around);
+  }
+  .header-modal__field {
+    & + & {
+      margin-top: 0;
+    }
+  }
 }
