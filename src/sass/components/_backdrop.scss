@@ -8,12 +8,23 @@
   background-color: var(--bg-backdrop);
   opacity: 1;
   visibility: visible;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.3s var(--primary-cubic-bezier),
+    visibility 0.3s var(--primary-cubic-bezier);
 
   &.backdrop-close {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
   }
+}
+.backdrop-header {
+	z-index: 2;
+  visibility: hidden;
+  overflow: auto;
+  opacity: 0;
+	&.open {
+    opacity: 1;
+    visibility: visible;
+    
+	}
 }

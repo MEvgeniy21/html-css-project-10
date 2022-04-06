@@ -1,38 +1,43 @@
 (() => {
 	const openModal = document.querySelector('.buy-now-button');
-	const menuModal = document.querySelector('.backdrop-header');
+	const backdropHeader = document.querySelector('.backdrop-header');
+	const headerModal = document.querySelector('.header-modal')
 	if (openModal) {
 		openModal.addEventListener("click", function() {
 			document.body.classList.toggle('lock_modal');
-			menuModal.classList.toggle('open');
+			backdropHeader.classList.toggle('open');
+			headerModal.classList.toggle('_open');
 		})
 	}
 	const closeModal = document.querySelector('.header-modal__button');
 	if (closeModal) {
 		closeModal.addEventListener("click", function() {
 			document.body.classList.remove('lock_modal');
-			menuModal.classList.remove('open');
+			backdropHeader.classList.remove('open');
+			headerModal.classList.remove('_open');
 		})
 	}
 
-	const openMenuModal = document.querySelector('.mob-menu__button');
-	const menuOpModal = document.querySelector('.backdrop-header');
-	const menuMobBurg = document.querySelector('.mob-menu');
-	const openMobMenu = document.querySelector('.header__open-burger');
-	if (openMenuModal) {
-		openMenuModal.addEventListener("click", function() {
+	const mobMenuButton = document.querySelector('.mob-menu__button');
+	const backdropHeaderMenu = document.querySelector('.backdrop-header');
+	const modalMobMenu = document.querySelector('.mob-menu');
+	const headerMenuModal = document.querySelector('.header-modal')
+	if (mobMenuButton) {
+		mobMenuButton.addEventListener("click", function() {
 			document.body.classList.toggle('lock_modal');
-			menuOpModal.classList.toggle('open');
+			headerMenuModal.classList.toggle('_open');
+			modalMobMenu.classList.toggle('active');
+
 		})
 	}
 	const closeMenuModal = document.querySelector('.header-modal__button');
+	const headerOpenBurger = document.querySelector('.header__open-burger');
 	if (closeMenuModal) {
 		closeMenuModal.addEventListener("click", function() {
 			document.body.classList.remove('lock_modal');
 			document.body.classList.remove('lock');
-			menuOpModal.classList.remove('open');
-			menuMobBurg.classList.remove('active');
-			openMobMenu.classList.remove('hidde');
+			backdropHeaderMenu.classList.remove('open');
+			headerOpenBurger.classList.remove('hidde');
 		})
 	}
 })();
