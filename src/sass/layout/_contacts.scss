@@ -219,7 +219,7 @@
 }
 
 .contacts-btn__item:not(:last-child) {
-    margin-bottom: 10px;
+        margin-bottom: 10px;
     @include min-media(768px){
         margin-bottom: 0;
         margin-right: 15px;
@@ -239,6 +239,7 @@
 
 .btn-locations {
     background: var(--btn-bg-secondary-color);
+    stroke: currentColor;
     color: var(--btn-bg-primary-color);
     transition: background-color 250ms var(--primary-cubic-bezier);
     &:hover,
@@ -246,12 +247,16 @@
         background-color: var(--btn-bg-hover-secondary-color);
     }
     @include min-media(768px){
-        min-width: 198px;
+        width: 191px;
+    }
+    @include min-media(1200px) {
+        width: 198px;
     }
 }
 
 .btn-franchise{
     background:var(--btn-bg-primary-color);
+    stroke: currentColor;
     color: var(--btn-bg-secondary-color);
     transition: background-color 250ms var(--primary-cubic-bezier);
     &:hover,
@@ -260,13 +265,20 @@
     }
     
     @include min-media(768px) {
-        min-width: 180px;
+        width: 174px;
+    }
+    @include min-media(1200px) {
+        width: 180px;
     }
 }
 
-.contacts-btn-icon{
-    @include min-media(1200px){
-        width: 6px;
-        height: 10px;
+
+.contacts-icon-locations{
+    margin-left: 8px;
+    @include min-media(768px) {
+        margin-left: 13.6px;;
     }
+}
+.contacts-icon-franchise{
+    margin-left: 13.6px;
 }
