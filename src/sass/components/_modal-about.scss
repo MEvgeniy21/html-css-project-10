@@ -1,102 +1,97 @@
 .modal__about {
-    width: 80vw;
-    height: auto;
-    background-color: var(--bg-product1-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.75s ease-out;
-    padding: 30px;
-    background-image: url(../images/about/bg-milk-320.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    overflow-y: auto;
-    
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: url(../images/about/bg-milk-320@2x.png);
+  width: 80vw;
+  height: auto;
+  max-height: 90vh;
+  background-color: var(--bg-product1-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s ease-out;
+  padding: 30px;
+  background-image: url(../images/about/bg-milk-320.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow-y: auto;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/bg-milk-320@2x.png);
+  }
+  @include min-media($mobile) {
+    width: 370px;
+  }
+  @include min-media($tablet) {
+    width: 600px;
+    // overflow-y: hidden;
+    padding: 50px;
+  }
+  @include min-media($desktop) {
+    width: 1000px;
+    // height: 70%;
+    padding: 70px;
+    background-image: url(../images/about/bg-milk-1280.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/bg-milk-1280@2x.png);
     }
-    @include min-media($mobile) {
-        width: 370px;
-    }
-    @include min-media($tablet) {
-        width: 600px;
-        // overflow-y: hidden;
-        padding: 50px;
-    }
-    @include min-media($desktop) {
-        width: 1000px;
-        // height: 70%;
-        padding: 70px;
-        background-image: url(../images/about/bg-milk-1280.png);
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url(../images/about/bg-milk-1280@2x.png);
-        }
-    }
+  }
 }
-  @media screen and (min-width: 1200px) {
-    .modal__title {
-      line-height: 1.15;
-    }
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
   }
-  .modal__button {
-    position: absolute;
-	top: 10px;
-	right: 7px;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 0;
-	background-color: transparent;
-	display: block;
-	margin-left: auto;
-	fill: var(--text-primary-color);
-	transition: fill 250ms var(--primary-cubic-bezier);
-	&:hover,
-	&:focus {
-		fill: var(--btn-bg-hover-secondary-color);
-	} 
+}
+.modal__button {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  fill: var(--text-primary-color);
+  transition: fill 250ms var(--primary-cubic-bezier);
+  &:hover,
+  &:focus {
+    fill: var(--btn-bg-hover-secondary-color);
   }
-  .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .modal__title {
-    @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
-    @include flex-position(flex, center, center);
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 26px;
+  @include font(34px, 39px, 0.04em, 400, var(--font-secondary));
+  @include flex-position(flex, center, center);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 26px;
 
-    color: var(--text-secondary-color);
-    @include min-media($tablet) {
-        @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
-        margin-bottom: 50px;
-}
-@include min-media($desktop) {
+  color: var(--text-secondary-color);
+  @include min-media($tablet) {
+    @include font(48px, 55px, 0.04em, 400, var(--font-secondary));
+    margin-bottom: 50px;
+  }
+  @include min-media($desktop) {
     @include font(58px, 66px, 0.06em, 400, var(--font-secondary));
     margin-bottom: 55px;
-}
+  }
 }
 .modal__about--list {
-    @include font(12px, 19px, null, 500, var(--font-primary));
+  @include font(12px, 19px, null, 500, var(--font-primary));
 
-
-    color: var(--text-content-secondary-color);
-    @include min-media($tablet) {
-        @include font(16px, 25px, 0.04em, 500, var(--font-primary));
-  
-    }
-    @include min-media($desktop) {
-        @include font(18px, 27px, 0.04em, 500, var(--font-primary));
-   
-    }
+  color: var(--text-content-secondary-color);
+  @include min-media($tablet) {
+    @include font(16px, 25px, 0.04em, 500, var(--font-primary));
+  }
+  @include min-media($desktop) {
+    @include font(18px, 27px, 0.04em, 500, var(--font-primary));
+  }
 }

@@ -1,183 +1,175 @@
 .modal-franchise-backdrop {
-    width: 100%;
-    height: 100%;
-    background-color: var(--bg-backdrop);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.75s ease-out;
-    z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-backdrop);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s ease-out;
+  z-index: 5;
 }
 
 .modal-franchise-backdrop.is-hidden .modal-franchise {
-    transform: translateX(100%);
-    transition: all 0.75s ease-out;
+  transform: translateX(100%);
+  transition: all 0.75s ease-out;
 }
 
 .modal-franchise {
-    width: 80%;
-    background-color: var(--bg-secondary-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.75s ease-out;
-    padding: 50px 30px;
+  width: 80%;
+  background-color: var(--bg-secondary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s ease-out;
+  padding: 50px 30px;
+  background-image: url(../images/contacts/bg-contacts-1280.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  overflow-y: auto;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/contacts/bg-contacts-1280@2x.png);
+  }
+
+  @include min-media($mobile) {
+    padding: 30px 50px 30px 50px;
+    max-width: 425px;
+  }
+
+  @include min-media($tablet) {
+    padding: 60px 70px 60px 70px;
+    max-width: 537px;
+  }
+
+  @include min-media($desktop) {
+    padding: 70px 50px;
     background-image: url(../images/contacts/bg-contacts-1280.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-    overflow-y: scroll;
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: url(../images/contacts/bg-contacts-1280@2x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/bg-contacts-1280@2x.png);
     }
-
-    @include min-media($mobile) {
-        padding: 30px 50px 30px 50px;
-        max-width: 425px;
-    }
-
-    @include min-media($tablet) {
-        padding: 60px 70px 60px 70px;
-        max-width: 537px;
-    }
-
-    @include min-media($desktop) {
-        padding: 70px 50px;
-        background-image: url(../images/contacts/bg-contacts-1280.png);
-
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url(../images/contacts/bg-contacts-1280@2x.png);
-        }
-    }
+  }
 }
 
-
 .modal-franchise__button {
-    position: absolute;
-    top: 10px;
-    right: 7px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 0;
-    background-color: transparent;
-    display: block;
-    margin-left: auto;
-    fill: var(--btn-bg-secondary-color);
-    transition: fill 250ms var(--primary-cubic-bezier);
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  fill: var(--btn-bg-secondary-color);
+  transition: fill 250ms var(--primary-cubic-bezier);
 }
 
 .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal-franchise__title {
-    @include font(30px, 34px, 0.04em, 700, var(--font-secondary));
-    text-align: center;
-    color: var(--text-secondary-color);
-    margin-bottom: 18px;
-    @include min-media($tablet){
-        @include font(43px, 47px, 0.04em, 700, var(--font-secondary));
-        margin-bottom: 25px;
-    }
-    @include min-media($desktop) {
-        margin-bottom: 30px;
-    }
+  @include font(30px, 34px, 0.04em, 700, var(--font-secondary));
+  text-align: center;
+  color: var(--text-secondary-color);
+  margin-bottom: 18px;
+  @include min-media($tablet) {
+    @include font(43px, 47px, 0.04em, 700, var(--font-secondary));
+    margin-bottom: 25px;
+  }
+  @include min-media($desktop) {
+    margin-bottom: 30px;
+  }
 }
 
-.modal-franchise__title-info{
-    @include font(17px, 23px, 0.03em, null, var(--text-content-secondary-color));
-    stroke: currentColor;
-    text-align: center;
-    color: var(--text-content-secondary-color);
-    margin-bottom: 24px;
-    @include min-media($tablet) {
-        @include font(20px, 26px, 0.04em, null, var(--text-content-secondary-color));
-        margin-bottom: 30px;
-    }
-    @include min-media($desktop) {
-        margin-bottom: 35px;
-    }
+.modal-franchise__title-info {
+  @include font(17px, 23px, 0.03em, null, var(--text-content-secondary-color));
+  stroke: currentColor;
+  text-align: center;
+  color: var(--text-content-secondary-color);
+  margin-bottom: 24px;
+  @include min-media($tablet) {
+    @include font(20px, 26px, 0.04em, null, var(--text-content-secondary-color));
+    margin-bottom: 30px;
+  }
+  @include min-media($desktop) {
+    margin-bottom: 35px;
+  }
 }
-
 
 .modal-franchise-form__input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding-left: 15px;
-    outline: none;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: border-color;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 15px;
+  outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
 
-    &:hover,
-    &:focus {
-        border-color: var(--btn-bg-hover-secondary-color);
-    }
-    @include min-media($desktop){
-        height: 50px;
-        @include font(17px, 19px, 0.03em, null, var(--text-content-primary-color));
-    }
+  &:hover,
+  &:focus {
+    border-color: var(--btn-bg-hover-secondary-color);
+  }
+  @include min-media($desktop) {
+    height: 50px;
+    @include font(17px, 19px, 0.03em, null, var(--text-content-primary-color));
+  }
 }
 
 .modal-franchise-form__name {
-    @include font(12px, 14px, 0.01em, null, var(--text-content-secondary-color));
-    margin-bottom: 4px;
-    display: block;
-    @include min-media($tablet){
-        @include font(15px, 17px, 0.02em, null, var(--text-content-secondary-color));
-    }
+  @include font(12px, 14px, 0.01em, null, var(--text-content-secondary-color));
+  margin-bottom: 4px;
+  display: block;
+  @include min-media($tablet) {
+    @include font(15px, 17px, 0.02em, null, var(--text-content-secondary-color));
+  }
 }
 
 .franchise-btn-submit {
-    width: 200px;
-    height: 50px;
-    background: var(--btn-bg-secondary-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    border: none;
-    @include font(16px, 30px, 0.06em, null, var(--text-primary-color));
-    color: var(--text-primary-color);
-    transition: background-color 250ms var(--primary-cubic-bezier);
-    &:hover,
-    &:focus{
-        background: var(--btn-bg-hover-secondary-color);
-    }
-    @include min-media(480px){
-        max-width: 200px;
-    }
+  width: 200px;
+  height: 50px;
+  background: var(--btn-bg-secondary-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  border: none;
+  @include font(16px, 30px, 0.06em, null, var(--text-primary-color));
+  color: var(--text-primary-color);
+  transition: background-color 250ms var(--primary-cubic-bezier);
+  &:hover,
+  &:focus {
+    background: var(--btn-bg-hover-secondary-color);
+  }
+  @include min-media(480px) {
+    max-width: 200px;
+  }
 }
 
 .franchis-form-field-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .franchis-form-field {
-    margin-bottom: 10px;
-    @include min-media(1200px){
-        margin-bottom: 25px;
-    }
+  margin-bottom: 10px;
+  @include min-media(1200px) {
+    margin-bottom: 25px;
+  }
 }
 
 .franchis-form__wrap {
-    position: relative;
+  position: relative;
 }
-
-
