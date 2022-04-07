@@ -89,7 +89,7 @@
   padding: 8px 20px;
 }
 // ===============TABLET==========================================================================
-@include min-media(768px) {
+@include min-media($tablet) {
   .header-modal__wrapper {
     width: 550px;
     background: var(--bg-modal-header);
@@ -102,5 +102,11 @@
     & + & {
       margin-top: 0;
     }
+  }
+}
+@include min-media($desktop) {
+  .header-modal__wrapper {
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
   }
 }
